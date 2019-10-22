@@ -1,31 +1,33 @@
-
+<?php 
+session_start();
+include_once("db_connect.php");
+?>
 
 
 <div class="container">
-	<h2 align=center>MidTown Tech</h2>		
-	<div class="row">
-		<div class="col-md-4 col-md-offset-4 well">
-			<form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
-				<fieldset>
-					<legend>Login</legend>						
-					<div class="form-group">
-						<label for="name">Email</label>
-						<input type="text" name="email" placeholder="Your Email" required class="form-control" />
-					</div>	
-					<div class="form-group">
-						<label for="name">Password</label>
-						<input type="password" name="password" placeholder="Your Password" required class="form-control" />
-					</div>	
-					<div class="form-group">
-						<input type="submit" name="login" value="Login" class="btn btn-primary" />
-					</div>
-				</fieldset>
-			</form>
-			<span class="text-danger"><?php if (isset($error_message)) { echo $error_message; } ?></span>
+	<h2 align=center>MidTown Tech</h2>	
+		
+		<br>
+		<br>
+		<div class="collapse navbar-collapse" id="navbar1">
+			<ul class="nav navbar-nav navbar-left">
+				<?php if ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="admin" ) )) { ?>
+				<li><p class="navbar-text"><strong>Welcome!</strong> You're signed in as <strong><?php echo $_SESSION['user_name']; ?></strong></p></li>
+				<li><a href="logout.php">Log Out</a></li>
+				<?php } elseif ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="enduser" ) )) { ?>
+				<li><p class="navbar-text"><strong>Welcome!</strong> You're signed in as <strong><?php echo $_SESSION['user_name']; ?></strong></p></li>
+				<li><a href="logout.php">Log Out</a></li>
+				<?php } elseif (isset($_SESSION['user_id'])) { ?>
+					<li><p class="navbar-text"><strong>Welcome!</strong> You're signed in as <strong><?php echo $_SESSION['user_name']; ?></strong></p></li>
+				<li><a href="logout.php">Log Out</a></li>
+				<?php } else { ?>
+				<li><a href="login.php">Login</a></li>
+				<li><a href="register.php">Sign Up</a></li>
+				<div>
+				</div>
+				<?php } ?>
+			</ul>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4 col-md-offset-4 text-center">	
-		New User? <a href="register.php">Sign Up Here</a>
-		</div>
-	</div>
+		
+		
+</div>
