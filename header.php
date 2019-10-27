@@ -2,77 +2,138 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.topnav {
+.navbar {
   overflow: hidden;
   background-color: #333;
 }
 
-.topnav a {
+.navbar a {
   float: left;
-  color: #f2f2f2;
+  font-size: 16px;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
 
-.topnav a.active {
-  background-color: #4CAF50;
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
   color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 </style>
 </head>
 <body>
 
-<div class="topnav">
-
 <!––if login user is admin-->
 <?php if ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="admin" ) )) { ?>
 
-<a class="active" href="#home">Home</a>
-
-<a href="profile">Profile</a>
-
-<a href="logout.php">logout</a>
-
+<div class="navbar">
+  <a href="#home">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Manage 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Users</a>
+      <a href="#">Assets</a>
+      <a href="#">Models</a>
+      <a href="#">Suppliers</a>
+    </div> 
+  </div>
+  <a href="profile.php">Profile</a>
+  <a href="logout.php">Logout</a>
+</div>
 
 <!––if login user is tech-->
-<?php } elseif ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="tech" ) )) { ?>
 
-<a class="active" href="#home">Home</a>
-
-<a href="profile">Profile</a>
-
-<a href="logout.php">logout</a>
-
-
-
+<div class="navbar">
+  <a href="#home">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Update 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Assets</a>
+      <a href="#">Models</a>
+    </div> 
+  </div>
+  <a href="profile.php">Profile</a>
+  <a href="logout.php">Logout</a>
+</div>
+<!––if login user is enduser-->
 <?php } elseif ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="enduser" ) )) { ?>
 
-<a class="active" href="#home">Home</a>
+<div class="navbar">
+  <a href="#home">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">View 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Assets</a>
+      <a href="#">Models</a>
+    </div> 
+  </div>
+  <a href="profile.php">Profile</a>
+  <a href="logout.php">Logout</a>
+</div>
 
-<a href="logout.php">logout</a>
-
-
- <?php } else { ?>
-<a class="active" href="#home">Home</a>
-
-<a href="login.php">Login</a>
-<a href="register.php">Register</a>
+<!––if no one logged in-->
+<?php } else { ?>
+<div class="navbar">
+  <a href="index.php">Home</a>
+  <a href="register.php">Register</a>
+  <a href="login.php">login</a>
+</div>
 
 <?php } ?>
 
-</div>
 </body>
 </html>
