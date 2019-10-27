@@ -13,6 +13,7 @@ if (isset($_POST['login'])) {
 	if ($row = mysqli_fetch_array($result)) {
 		$_SESSION['user_id'] = $row['user_id'];
 		$_SESSION['firstname'] = $row['firstname'];	
+		$_SESSION['lastname'] = $row['lastname'];	
 		$_SESSION['userType'] = $row['userType'];	
 		header("Location: index.php");
 	} else {
@@ -47,6 +48,6 @@ if (isset($_POST['login'])) {
 	</div>
 	<div class="row">
 		<div class="">	
-		New User? <a href="register.php">Sign Up Here</a>
+		
 		</div>
 	</div>

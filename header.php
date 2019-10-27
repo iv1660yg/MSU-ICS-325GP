@@ -39,7 +39,7 @@ body {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: green;
 }
 
 .dropdown-content {
@@ -130,7 +130,7 @@ body {
 <div class="navbar">
   <a href="index.php">Home</a>
   <a href="register.php">Register</a>
-  <a href="login.php">login</a>
+  <a href="login.php">Login</a>
 </div>
 
 <?php } ?>
