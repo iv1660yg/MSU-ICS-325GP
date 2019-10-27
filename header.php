@@ -92,7 +92,7 @@ body {
 </div>
 
 <!––if login user is tech-->
-
+<?php } elseif ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="tech" ) )) { ?>
 <div class="navbar">
   <a href="#home">Home</a>
   <div class="dropdown">
