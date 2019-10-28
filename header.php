@@ -152,7 +152,6 @@ body {
 <!––if no one logged in-->
 <?php } else { ?>
 <div class="navbar">
-  MidTown Tech
   <a href="index.php">Home</a>
   <a href="register.php">Register</a>
   <a href="login.php">Login</a>
