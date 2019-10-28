@@ -37,7 +37,6 @@ include_once("db_connect.php");
 					<input type="text" name="primary_phone" placeholder="primary_phone" required class="form-control" />
 
 					<button type="submit" name="login">login</button>
-					<p class="message">Not registered? <a href="register.php">Create an account</a></p>
 					</fieldset>
 					</form>
 				</div>
