@@ -75,7 +75,7 @@ body {
 <?php if ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="admin" ) )) { ?>
 
 <div class="navbar">
-  <a href="#home">Home</a>
+  <a href="index.php">Home</a>
   <div class="dropdown">
     <button class="dropbtn">Manage 
       <i class="fa fa-caret-down"></i>
@@ -92,8 +92,8 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">View Profile</a>
-      <a href="#">Change Password</a>
+      <a href="profile.php">View Profile</a>
+      <a href="changepassword.php">Change Password</a>
     </div> 
   </div>
   <a href="logout.php">Logout</a>
@@ -102,7 +102,7 @@ body {
 <!––if login user is tech-->
 <?php } elseif ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="tech" ) )) { ?>
 <div class="navbar">
-  <a href="#home">Home</a>
+  <a href="index.php">Home</a>
   <div class="dropdown">
     <button class="dropbtn">Update 
       <i class="fa fa-caret-down"></i>
@@ -117,8 +117,8 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">View Profile</a>
-      <a href="#">Change Password</a>
+      <a href="profile.php">View Profile</a>
+      <a href="changepassword.php">Change Password</a>
     </div> 
   </div>
   <a href="logout.php">Logout</a>
@@ -127,7 +127,7 @@ body {
 <?php } elseif ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="enduser" ) )) { ?>
 
 <div class="navbar">
-  <a href="#home">Home</a>
+  <a href="index.php">Home</a>
   <div class="dropdown">
     <button class="dropbtn">View 
       <i class="fa fa-caret-down"></i>
@@ -142,8 +142,8 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">View Profile</a>
-      <a href="#">Change Password</a>
+      <a href="profile.php">View Profile</a>
+      <a href="changepassword">Change Password</a>
     </div> 
   </div>
   <a href="logout.php">Logout</a>
