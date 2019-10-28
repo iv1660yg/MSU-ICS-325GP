@@ -22,32 +22,19 @@ if (isset($_POST['login'])) {
 }
 ?>
 
-
-<div class="container">
-	<h2 align=center>MidTown Tech</h2>		
-	<div class="row">
-		<div class="">
-			<form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
-				<fieldset>
-					<legend>Employee Login</legend>						
-					<div class="form-group">
-						<label for="name">Email</label>
-						<input type="text" name="email" placeholder="Your Email" required class="form-control" />
-					</div>	
-					<div class="form-group">
-						<label for="name">Password</label>
-						<input type="password" name="password" placeholder="Your Password" required class="form-control" />
-					</div>	
-					<div class="form-group">
-						<input type="submit" name="login" value="Login" class="btn btn-primary" />
-					</div>
-				</fieldset>
-			</form>
-			<span class="text-danger"><?php if (isset($error_message)) { echo $error_message; } ?></span>
-		</div>
-	</div>
-	<div class="row">
-		<div class="">	
-		
-		</div>
-	</div>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<div class="login-page">
+  <div class="form">
+  	<fieldset>
+	<legend>Employee Login</legend>	
+    <form class="login-form" role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
+      <input type="text" name="email" placeholder="email" required class="form-control" />
+      <input type="password" name="password" placeholder="password" required class="form-control" />
+      <button type="submit" name="login">login</button>
+      <p class="message">Not registered? <a href="register.php">Create an account</a></p>
+	  </fieldset>
+    </form>
+  </div>
+</div>
