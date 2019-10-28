@@ -87,7 +87,15 @@ body {
       <a href="#">Suppliers</a>
     </div> 
   </div>
-  <a href="profile.php">Profile</a>
+  <div class="dropdown">
+    <button class="dropbtn">Profile 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">View Profile</a>
+      <a href="#">Change Password</a>
+    </div> 
+  </div>
   <a href="logout.php">Logout</a>
 </div>
 
@@ -104,7 +112,15 @@ body {
       <a href="#">Models</a>
     </div> 
   </div>
-  <a href="profile.php">Profile</a>
+  <div class="dropdown">
+    <button class="dropbtn">Profile 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">View Profile</a>
+      <a href="#">Change Password</a>
+    </div> 
+  </div>
   <a href="logout.php">Logout</a>
 </div>
 <!––if login user is enduser-->
@@ -121,7 +137,15 @@ body {
       <a href="#">Models</a>
     </div> 
   </div>
-  <a href="profile.php">Profile</a>
+  <div class="dropdown">
+    <button class="dropbtn">Profile 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">View Profile</a>
+      <a href="#">Change Password</a>
+    </div> 
+  </div>
   <a href="logout.php">Logout</a>
 </div>
 
