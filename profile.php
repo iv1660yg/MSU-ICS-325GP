@@ -20,17 +20,22 @@ include_once("db_connect.php");
 				<?php if ((isset($_SESSION['user_id']) )) { ?>
                 <li><p class="navbar-text"><strong>Welcome!</strong> You're signed in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p></li>
 	
-				<div class="login-page">
+				<div class="main-page">
 				<div class="form">
 					<fieldset>
 					<legend>Employee Profile</legend>	
 					<form class="login-form" role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
-					<input type="text" name="firstname" placeholder="email" required class="form-control" />
-					<input type="text" name="lastname" placeholder="email" required class="form-control" />
+					
+					<input type="text" name="firstname" placeholder="firstname" required class="form-control" />
+				
+					<input type="text" name="middle" placeholder="middle" required class="form-control" />
+
+					<input type="text" name="lastname" placeholder="lastname" required class="form-control" />
 			
 					<input type="text" name="email" placeholder="email" required class="form-control" />
+					
+					<input type="text" name="primary_phone" placeholder="primary_phone" required class="form-control" />
 
-					<input type="password" name="password" placeholder="password" required class="form-control" />
 					<button type="submit" name="login">login</button>
 					<p class="message">Not registered? <a href="register.php">Create an account</a></p>
 					</fieldset>
