@@ -13,7 +13,9 @@ if (isset($_POST['login'])) {
 	if ($row = mysqli_fetch_array($result)) {
 		$_SESSION['user_id'] = $row['user_id'];
 		$_SESSION['firstname'] = $row['firstname'];	
-		$_SESSION['lastname'] = $row['lastname'];	
+		$_SESSION['middle'] = $row['middle'];
+		$_SESSION['lastname'] = $row['lastname'];
+		$_SESSION['email'] = $row['email'];
 		$_SESSION['userType'] = $row['userType'];	
 		header("Location: index.php");
 	} else {
