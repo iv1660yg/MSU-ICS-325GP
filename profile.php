@@ -16,12 +16,13 @@ include_once("db_connect.php");
 		<br>
 		<br>
 		<div class="collapse navbar-collapse" id="navbar1">
-			<ul class="nav navbar-nav navbar-left">
 				<?php if ((isset($_SESSION['user_id']) )) { ?>
-                <li><p class="navbar-text"><strong>Welcome!</strong> You're signed in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p></li>
+                <li></li>
 	
 				<div class="main-page">
 				<div class="form">
+
+				<p class="welcome"><strong>Welcome!</strong> You're signed in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
 					<fieldset>
 					<legend>Employee Profile</legend>	
 					<form class="login-form" role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
@@ -47,7 +48,7 @@ include_once("db_connect.php");
 
 
 
-			</ul>
+			
 		</div>
 		
 		
