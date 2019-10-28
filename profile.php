@@ -10,12 +10,10 @@ include_once("db_connect.php");
 <head>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<div class="container">
 	<h2 align=center>MidTown Tech</h2>	
 		
 		<br>
 		<br>
-		<div class="collapse navbar-collapse" id="navbar1">
 				<?php if ((isset($_SESSION['user_id']) )) { ?>
                 
 	
@@ -55,13 +53,6 @@ include_once("db_connect.php");
 				</div>
 
 
-
 				<?php } ?>
-
-
-
-			
-		</div>
 		
 		
-</div>
