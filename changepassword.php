@@ -24,7 +24,7 @@ if (isset($_POST['updatepassword'])) {
 
 
 	} else {
-		$error_message = "error !!!";
+		$error_message = "";
 	}
 
 
