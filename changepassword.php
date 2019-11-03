@@ -26,10 +26,10 @@ if (isset($_POST['login'])) {
 
 		if ($password1 == $password2) {
 			include_once("db_connect.php");
-			mysqli_query($conn, "UPDATE 'users' SET 'password' = " .$password1. " WHERE 'users'.'user_id' = " .$_SESSION['user_id']." ");
+			mysqli_query($conn, "UPDATE 'users' SET 'password' = " . md5($password1) . " WHERE 'users'.'user_id' = " .$_SESSION['user_id']." ");
 		}
 		else {
-			$error_message = "password does not match" ;
+			$error_message = "Error password does not match!" ;
 
 		}
 
@@ -55,12 +55,12 @@ if (isset($_POST['login'])) {
 <div class="login-page">
   <div class="form">
   	<fieldset>
-	<legend>Employee Login</legend>	
+	<legend>Change Password</legend>	
     <form class="login-form" role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
       <input type="password" name="password1" placeholder="password" required class="form-control" />
       <input type="password" name="password2" placeholder="password" required class="form-control" />
       <button type="submit" name="updatepassword">Change Password</button>
-	  <?php echo $error_message ?>
+	  <?php echo "<BR>" .$error_message ?>
 	  </fieldset>
     </form>
   </div>
