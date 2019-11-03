@@ -3,7 +3,7 @@ ob_start();
 include('header.php');
 include_once("db_connect.php");
 session_start();
-if(isset($_SESSION['user_id'])!="") {
+if(isset($_SESSION['user_id']) =="") {
 	header("Location: index.php");
 }
 if (isset($_POST['login'])) {
