@@ -77,6 +77,15 @@ body {
 <div class="navbar">
   <a href="index.php">Home</a>
   <div class="dropdown">
+    <button class="dropbtn">Search 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="searchuser.php">Search User</a>
+      <a href="searchasset.php">Search Assets</a>
+    </div> 
+  </div>
+  <div class="dropdown">
     <button class="dropbtn">Manage 
       <i class="fa fa-caret-down"></i>
     </button>
@@ -104,6 +113,15 @@ body {
 <div class="navbar">
   <a href="index.php">Home</a>
   <div class="dropdown">
+    <button class="dropbtn">Search 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="searchuser.php">Search User</a>
+      <a href="searchasset.php">Search Assets</a>
+    </div> 
+  </div>
+  <div class="dropdown">
     <button class="dropbtn">Update 
       <i class="fa fa-caret-down"></i>
     </button>
@@ -129,6 +147,15 @@ body {
 <div class="navbar">
   <a href="index.php">Home</a>
   <div class="dropdown">
+    <button class="dropbtn">Search 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="searchuser.php">Search User</a>
+      <a href="searchasset.php">Search Assets</a>
+    </div> 
+  </div>
+  <div class="dropdown">
     <button class="dropbtn">View 
       <i class="fa fa-caret-down"></i>
     </button>
@@ -143,7 +170,7 @@ body {
     </button>
     <div class="dropdown-content">
       <a href="profile.php">View Profile</a>
-      <a href="changepassword">Change Password</a>
+      <a href="changepassword.php">Change Password</a>
     </div> 
   </div>
   <a href="logout.php">Logout</a>
