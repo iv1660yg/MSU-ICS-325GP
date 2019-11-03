@@ -13,16 +13,26 @@ if (isset($_POST['updatepassword'])) {
 		$password2 = $_POST['password2'] ;
 
 		if ($password1 == $password2) {
+
+			// include mysql conection 
 			include_once("db_connect.php");
-			if (mysqli_query($conn, "UPDATE users SET password = " . md5($password1). " WHERE user_id = " .$_SESSION['user_id']." ")){
+
+			//create new password as md5 hash
+			$newPassword = md5(password1);
+
+			if (mysqli_query($conn, "UPDATE users SET password = " .$newPassword. " WHERE user_id = " .$_SESSION['user_id']." ")){
 			$error_message = "Password successfully changed!";
+			}
+			else {
+				//unable to run sql query to update password
+				$error_message = "System Error";
 			}
 		}
 		else {
+
 			$error_message = "Error password does not match!";
 
 		}
-
 
 	} else {
 		$error_message = "";
