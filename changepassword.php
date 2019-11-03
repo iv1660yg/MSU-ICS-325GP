@@ -14,7 +14,7 @@ if (isset($_POST['updatepassword'])) {
 
 		if ($password1 == $password2) {
 			include_once("db_connect.php");
-			if (mysqli_query($conn, "UPDATE users SET password = " . $password1. " WHERE user_id = " .$_SESSION['user_id']." ")){
+			if (mysqli_query($conn, "UPDATE users SET password = " . md5($password1). " WHERE user_id = " .$_SESSION['user_id']." ")){
 			$error_message = "Password successfully changed!";
 			}
 		}
