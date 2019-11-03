@@ -20,7 +20,7 @@ if (isset($_POST['updatepassword'])) {
 			//create new password as md5 hash
 			$newPassword = md5(password1);
 
-			if (mysqli_query($conn, "UPDATE users SET password = " .$newPassword. " WHERE user_id = " .$_SESSION['user_id']." ")){
+			if (mysqli_query($conn, " UPDATE users SET password = " . $newPassword . " WHERE user_id = " .$_SESSION['user_id']." ")){
 			$error_message = "Password successfully changed!";
 			}
 			else {
