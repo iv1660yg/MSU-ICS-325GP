@@ -1,24 +1,13 @@
 <?php 
-ob_start();
+session_start();
 include('header.php');
 include_once("db_connect.php");
+
 if(isset($_SESSION['user_id']) =="") {
 	header("Location: index.php");
 }
-if (isset($_POST['login'])) {
-	$email = mysqli_real_escape_string($conn, $_POST['email']);
-	$password = mysqli_real_escape_string($conn, $_POST['password']);
-	$result = mysqli_query($conn, "SELECT * FROM users WHERE email = '" . $email. "' and password = '" .$password. "'");
-	if ($row = mysqli_fetch_array($result)) {
-		$_SESSION['user_id'] = $row['user_id'];
-		$_SESSION['firstname'] = $row['firstname'];	
-		$_SESSION['middle'] = $row['middle'];
-		$_SESSION['lastname'] = $row['lastname'];
-		$_SESSION['email'] = $row['email'];
-		$_SESSION['userType'] = $row['userType'];	
-		header("Location: index.php");
 
-	} elseif (isset($_POST['updatepassword'])) {
+if (isset($_POST['updatepassword'])) {
 		
 		$password1 = $_POST['password1'] ;
 		$password2 = $_POST['password2'] ;
@@ -26,18 +15,12 @@ if (isset($_POST['login'])) {
 		if ($password1 == $password2) {
 			include_once("db_connect.php");
 			mysqli_query($conn, "UPDATE 'users' SET 'password' = " . md5($password1) . " WHERE 'users'.'user_id' = " .$_SESSION['user_id']." ");
+			$error_message = "Password successfully changed!";
 		}
 		else {
-			$error_message = "Error password does not match!" ;
+			$error_message = "Error password does not match!";
 
 		}
-
-
-
-
-
-
-
 
 
 	} else {
@@ -45,7 +28,6 @@ if (isset($_POST['login'])) {
 	}
 
 
-}
 ?>
 
 <head>
