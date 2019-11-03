@@ -29,9 +29,9 @@ if (isset($_POST['login'])) {
 			mysqli_query($conn, "UPDATE 'users' SET 'password' = " .$password1. " WHERE 'users'.'user_id' = " .$_SESSION['user_id']." ");
 		}
 		else {
-			$error_message = "password does not match"
+			$error_message = "password does not match" ;
 
-		}	
+		}
 
 
 
