@@ -26,6 +26,8 @@ if (empty($_POST["keyword"])) {
       <input type="text" name="keyword" placeholder="keyword" required class="form-control" />
       <button type="submit" name="search">Search Users</button>
 	  <?php echo "<BR>" .$error_message ?>
+    
+<table align=center>
 	  <?php
 // DB file
 include_once("db_connect.php");
@@ -71,6 +73,7 @@ if(!empty($_POST['keyword'] && preg_match("/^[a-zA-Z0-9 ]+$/",$_POST["keyword"])
 
 
 ?>
+</table>
 	  </fieldset>
     </form>
   </div>
