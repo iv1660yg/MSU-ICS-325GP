@@ -23,7 +23,7 @@ if (empty($_POST["keyword"])) {
   	<fieldset>
 	<legend>Search Users</legend>	
     <form class="login-form" role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
-      <input type="texr" name="keyword" placeholder="key word" required class="form-control" />
+      <input type="text" name="keyword" placeholder="keyword" required class="form-control" />
       <button type="submit" name="search">Search Users</button>
 	  <?php echo "<BR>" .$error_message ?>
 	  <?php
@@ -40,11 +40,11 @@ if(!empty($_POST['keyword'] && preg_match("/^[a-zA-Z0-9 ]+$/",$_POST["keyword"])
       $aKeyword = explode(" ", trim($_POST['keyword']));
     
 
-      $query ="SELECT * FROM users WHERE fristname OR lastname like '%" . $aKeyword[0] . "%'";
+      $query ="SELECT * FROM users WHERE firstname OR lastname like '%" . $aKeyword[0] . "%'";
       
      for($i = 1; $i < count($aKeyword); $i++) {
         if(!empty($aKeyword[$i])) {
-            $query .= " OR  fristname OR lastname like '%" . $aKeyword[$i] . "%'";
+            $query .= " OR  firstname OR lastname like '%" . $aKeyword[$i] . "%'";
         }
       }
      
