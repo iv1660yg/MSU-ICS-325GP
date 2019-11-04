@@ -16,6 +16,10 @@ if (isset($_POST['login'])) {
 		$_SESSION['middle'] = $row['middle'];
 		$_SESSION['lastname'] = $row['lastname'];
 		$_SESSION['email'] = $row['email'];
+		$_SESSION['title'] = $row['title'];
+		$_SESSION['managed_by'] = $row['managed_by'];
+		$_SESSION['dept_id'] = $row['dept_id'];
+		$_SESSION['primary_phone'] = $row['primary_phone'];
 		$_SESSION['userType'] = $row['userType'];	
 		header("Location: index.php");
 	} else {

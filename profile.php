@@ -45,6 +45,14 @@ include_once("db_connect.php");
 							<td>Email</td>
 							<td><?php echo $_SESSION['email']; ?></td>
 						</tr>
+						<tr>
+							<td>Title</td>
+							<td><?php echo $_SESSION['title']; ?></td>
+						</tr>
+						<tr>
+							<td>Phone Number</td>
+							<td><?php echo $_SESSION['primary_phone']; ?></td>
+						</tr>
 
 					</table>
 					
