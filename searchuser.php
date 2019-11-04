@@ -40,11 +40,11 @@ if(!empty($_POST['keyword'] && preg_match("/^[a-zA-Z0-9 ]+$/",$_POST["keyword"])
       $aKeyword = explode(" ", trim($_POST['keyword']));
     
 
-      $query ="SELECT * FROM users WHERE firstname OR lastname like '%" . $aKeyword[0] . "%'";
+      $query ="SELECT * FROM users WHERE firstname like '%" . $aKeyword[0] . "%' OR lastname like  '%" . $aKeyword[0] . "%' ";
       
      for($i = 1; $i < count($aKeyword); $i++) {
         if(!empty($aKeyword[$i])) {
-            $query .= " OR  firstname OR lastname like '%" . $aKeyword[$i] . "%'";
+            $query .= " OR firstname like '%" . $aKeyword[$i] . "%' OR lastname like '%" . $aKeyword[$i] . "%'";
         }
       }
      
