@@ -21,7 +21,7 @@ if (empty($_POST["keyword"])) {
 <div class="login-page">
   <div class="form">
   	<fieldset>
-	<legend>Change Password</legend>	
+	<legend>Search Users</legend>	
     <form class="login-form" role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
       <input type="texr" name="keyword" placeholder="key word" required class="form-control" />
       <button type="submit" name="search">Search Users</button>
