@@ -18,7 +18,7 @@ if (empty($_POST["keyword"])) {
 <head>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<div class="login-page">
+<div class="search-page">
   <div class="form">
   	<fieldset>
 	<legend>Search Users</legend>	
@@ -62,7 +62,7 @@ if(!empty($_POST['keyword'] && preg_match("/^[a-zA-Z0-9 ]+$/",$_POST["keyword"])
         echo "<br><tr>";
         While($row = $result->fetch_assoc()) {   
             $row_count++;                         
-            echo "<tr><td> user result ".$row_count." </td> <td><a href=userdetails.php?id=".$row['user_id'].">" . $row['firstname'] . " " . $row['lastname'] ."</a><td></tr>";
+            echo "<tr><td> Result ".$row_count." </td> <td><a href=userdetails.php?id=".$row['user_id'].">" . $row['firstname'] . " " . $row['lastname'] ."</a><td></tr>";
         }
         echo "</tr>";
     }
