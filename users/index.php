@@ -15,7 +15,7 @@ if(isset($_SESSION['user_id']) =="") {
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>  
 </head>
 <div class="manage-page">
-  <div class="forms">
+  <div class="form2">
   	<fieldset>
     <body>  
         <div class="">  
@@ -36,7 +36,7 @@ if(isset($_SESSION['user_id']) =="") {
                                 <th>title</th>
                                 <th>Phone</th>
                                 <th>Email</th>
-                                <th>Account Type</th>
+                                <th>User Type</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -45,9 +45,9 @@ if(isset($_SESSION['user_id']) =="") {
                                 <td><input type="text" ng-model="addData.lastname" class="form-control" placeholder="Enter Last Name" ng-required="true" /></td>
                                 <td><input type="password" ng-model="addData.password" class="form-control" placeholder="Enter Password" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.title" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.phone" class="form-control" placeholder="Enter Year" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.email" class="form-control" placeholder="Enter Color" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.account_type" class="form-control" placeholder="Enter Miles" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.phone" class="form-control" placeholder="Enter Phone#" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.email" class="form-control" placeholder="Enter Email" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.userType" class="form-control" placeholder=Enter Account Type" ng-required="true" /></td>
 
 
 
@@ -66,7 +66,7 @@ if(isset($_SESSION['user_id']) =="") {
                     <td>{{data.title}}</td>
                     <td>{{data.primary_phone}}</td>
                     <td>{{data.email}}</td>
-                    <td>{{data.account_type}}</td>
+                    <td>{{data.userType}}</td>
                     <td>
                         <button type="button" class="btn btn-primary btn-sm" ng-click="showEdit(data)">Edit</button>
                         <button type="button" class="btn btn-danger btn-sm" ng-click="deleteData(data.user_id)">Delete</button>
@@ -79,7 +79,7 @@ if(isset($_SESSION['user_id']) =="") {
                     <td><input type="text" ng-model="formData.title" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.primary_phone" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.email" class="form-control" /></td>
-                    <td><input type="text" ng-model="formData.account_type" class="form-control" /></td>
+                    <td><input type="text" ng-model="formData.userType" class="form-control" /></td>
                     <td>
                         <input type="hidden" ng-model="formData.data.user_id" />
                         <button type="button" class="btn btn-info btn-sm" ng-click="editData()">Save</button>

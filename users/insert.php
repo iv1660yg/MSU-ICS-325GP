@@ -15,13 +15,13 @@ $data = array(
     ':title'  => $form_data->title,
     ':primary_phone'  => $form_data->primary_phone,
     ':email'  => $form_data->email,  
-    ':account_type'  => $form_data->account_type
+    ':userType'  => $form_data->userType
 );
 
 $query = "
  INSERT INTO users 
- (firstname, lastname, password, title, primary_phone, email, account_type) VALUES 
- (:firstname, :lastname, md5(:password), :title, :primary_phone, :email, :account_type)
+ (firstname, lastname, password, title, primary_phone, email, userType) VALUES 
+ (:firstname, :lastname, md5(:password), :title, :primary_phone, :email, :userType)
 ";
 
 $statement = $connect->prepare($query);
