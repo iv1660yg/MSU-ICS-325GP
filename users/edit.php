@@ -15,13 +15,13 @@ $data = array(
  ':title'  => $form_data->title,
  ':primary_phone'  => $form_data->primary_phone,
  ':email'  => $form_data->email,
- ':account_type'  => $form_data->account_type,
+ ':userType'  => $form_data->userType,
  ':user_id'    => $form_data->user_id
 );
 
 $query = "
  UPDATE users 
- SET firstname = :firstname, lastname = :lastname, password = md5(:password), title = :title, primary_phone = :primary_phone, email = :email, account_type = :account_type   
+ SET firstname = :firstname, lastname = :lastname, password = md5(:password), title = :title, primary_phone = :primary_phone, email = :email, userType = :userType   
  WHERE user_id = :user_id
 ";
 
