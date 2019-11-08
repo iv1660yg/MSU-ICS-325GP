@@ -14,8 +14,7 @@ if(isset($_SESSION['user_id']) =="") {
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>  
 </head>
-<div class="">
-  <div class="">
+
   	<fieldset>
     <body>  
         <div class="">  
@@ -45,7 +44,7 @@ if(isset($_SESSION['user_id']) =="") {
                                 <td><input type="text" ng-model="addData.lastname" class="form-control" placeholder="Enter Last Name" ng-required="true" /></td>
                                 <td><input type="password" ng-model="addData.password" class="form-control" placeholder="Enter Password" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.title" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.phone" class="form-control" placeholder="Enter Phone#" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.primary_phone" class="form-control" placeholder="Enter Phone#" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.email" class="form-control" placeholder="Enter Email" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.userType" class="form-control" placeholder=Enter Account Type" ng-required="true" /></td>
 
@@ -90,8 +89,7 @@ if(isset($_SESSION['user_id']) =="") {
   </div>
     </body>  
 	  </fieldset>
-  </div>
-</div>
+
 <script>
 var app = angular.module('liveApp', []);
 
