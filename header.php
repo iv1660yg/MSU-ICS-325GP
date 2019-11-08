@@ -90,7 +90,7 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Users</a>
+      <a href="../users/index.php">Users</a>
       <a href="#">Assets</a>
       <a href="#">Models</a>
       <a href="#">Suppliers</a>
