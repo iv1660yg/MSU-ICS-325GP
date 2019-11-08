@@ -9,18 +9,19 @@ $message = '';
 $form_data = json_decode(file_get_contents("php://input"));
 
 $data = array(
-    ':fullname'  => $form_data->fullname,
-    ':pass'  => $form_data->pass,
-    ':address'  => $form_data->address,
-    ':phone'  => $form_data->phone,
+    ':firstname'  => $form_data->firstname,
+    ':lastname'  => $form_data->lastname,
+    ':password'  => $form_data->password,
+    ':title'  => $form_data->title,
+    ':primary_phone'  => $form_data->primary_phone,
     ':email'  => $form_data->email,  
     ':account_type'  => $form_data->account_type
 );
 
 $query = "
  INSERT INTO users 
- (fullname, pass, address, phone, email, account_type) VALUES 
- (:fullname, md5(:pass), :address, :phone, :email, :account_type)
+ (firstname, lastname, password, title, primary_phone, email, account_type) VALUES 
+ (:firstname, :lastname, md5(:password), :title, :primary_phone, :email, :account_type)
 ";
 
 $statement = $connect->prepare($query);
