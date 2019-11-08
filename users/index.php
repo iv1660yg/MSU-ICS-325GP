@@ -14,8 +14,8 @@ if(isset($_SESSION['user_id']) =="") {
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>  
 </head>
-<div class="manage-page">
-  <div class="form2">
+<div class="">
+  <div class="">
   	<fieldset>
     <body>  
         <div class="">  
