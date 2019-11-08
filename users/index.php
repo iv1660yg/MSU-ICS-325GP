@@ -15,12 +15,12 @@ if(isset($_SESSION['user_id']) =="") {
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>  
 </head>
 <div class="manage-page">
-  <div class="mform">
+  <div class="form2">
   	<fieldset>
     <body>  
-        <div class="container">  
+        <div class="">  
    <br />
-            <h3 align="center"> </h3><br />
+            <h3 align="center"> </h3>Manage Users<br />
    <div class="table-responsive" ng-app="liveApp" ng-controller="liveController" ng-init="fetchData()">
                 <div class="alert alert-success alert-dismissible" ng-show="success" >
                     <a href="#" class="close" data-dismiss="alert" ng-click="closeMsg()" aria-label="close">&times;</a>
