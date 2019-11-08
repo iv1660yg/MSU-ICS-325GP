@@ -7,12 +7,6 @@ if(isset($_SESSION['user_id']) =="") {
 	header("Location: ../index.php");
 }
 
-if (empty($_POST["keyword"])) {
-	$searcherr = "";
-  } elseif (!empty($_POST["keyword"]) AND !preg_match("/^[a-zA-Z0-9 ]+$/",$_POST["keyword"])) {
-	$searcherr = "Keyword must contain only numbers and alphabets.";
-  }
-
 ?>
 
 <head>
