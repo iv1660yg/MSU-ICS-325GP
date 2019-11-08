@@ -1,10 +1,10 @@
 <?php 
 session_start();
-include('header.php');
-include_once("db_connect.php");
+include('../header.php');
+include_once("../db_connect.php");
 
 if(isset($_SESSION['user_id']) =="") {
-	header("Location: index.php");
+	header("Location: ../index.php");
 }
 
 if (empty($_POST["keyword"])) {
@@ -20,8 +20,8 @@ if (empty($_POST["keyword"])) {
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>  
 </head>
-<div class="search-page">
-  <div class="form">
+<div class="Mangage-page">
+  <div class="mform">
   	<fieldset>
     <body>  
         <div class="container">  
