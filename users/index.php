@@ -15,12 +15,12 @@ if(isset($_SESSION['user_id']) =="") {
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>  
 </head>
 <div class="manage-page">
-  <div class="form2">
+  <div class="forms">
   	<fieldset>
     <body>  
         <div class="">  
    <br />
-            <h3 align="center"> </h3>Manage Users<br />
+            <h3 align="center">Manage Users</h3><br />
    <div class="table-responsive" ng-app="liveApp" ng-controller="liveController" ng-init="fetchData()">
                 <div class="alert alert-success alert-dismissible" ng-show="success" >
                     <a href="#" class="close" data-dismiss="alert" ng-click="closeMsg()" aria-label="close">&times;</a>
@@ -30,9 +30,10 @@ if(isset($_SESSION['user_id']) =="") {
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>Full Name</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
                                 <th>Password</th>
-                                <th>Address</th>
+                                <th>title</th>
                                 <th>Phone</th>
                                 <th>Email</th>
                                 <th>Account Type</th>
@@ -40,9 +41,10 @@ if(isset($_SESSION['user_id']) =="") {
                         </thead>
                         <tbody>
                             <tr>
-                                <td><input type="text" ng-model="addData.fullname" class="form-control" placeholder="Enter Price Per Day" ng-required="true" /></td>
-                                <td><input type="password" ng-model="addData.pass" class="form-control" placeholder="Enter Make" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.address" class="form-control" placeholder="Enter Model" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.firstname" class="form-control" placeholder="Enter First Name" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.lastname" class="form-control" placeholder="Enter Last Name" ng-required="true" /></td>
+                                <td><input type="password" ng-model="addData.password" class="form-control" placeholder="Enter Password" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.title" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.phone" class="form-control" placeholder="Enter Year" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.email" class="form-control" placeholder="Enter Color" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.account_type" class="form-control" placeholder="Enter Miles" ng-required="true" /></td>
@@ -58,26 +60,28 @@ if(isset($_SESSION['user_id']) =="") {
                     </table>
                 </form>
                 <script type="text/ng-template" id="display">
-                    <td>{{data.fullname}}</td>
-                    <td>{{data.pass}}</td>
-                    <td>{{data.address}}</td>
-                    <td>{{data.phone}}</td>
+                    <td>{{data.firstname}}</td>
+                    <td>{{data.lastname}}</td>
+                    <td>{{data.password}}</td>
+                    <td>{{data.title}}</td>
+                    <td>{{data.primary_phone}}</td>
                     <td>{{data.email}}</td>
                     <td>{{data.account_type}}</td>
                     <td>
                         <button type="button" class="btn btn-primary btn-sm" ng-click="showEdit(data)">Edit</button>
-                        <button type="button" class="btn btn-danger btn-sm" ng-click="deleteData(data.uid)">Delete</button>
+                        <button type="button" class="btn btn-danger btn-sm" ng-click="deleteData(data.user_id)">Delete</button>
                     </td>
                 </script>
                 <script type="text/ng-template" id="edit">
-                    <td><input type="text" ng-model="formData.fullname" class="form-control"  /></td>
-                    <td><input type="text" ng-model="formData.pass" class="form-control" /></td>
-                    <td><input type="text" ng-model="formData.address" class="form-control" /></td>
-                    <td><input type="text" ng-model="formData.phone" class="form-control" /></td>
+                    <td><input type="text" ng-model="formData.firstname" class="form-control"  /></td>
+                    <td><input type="text" ng-model="formData.lastname" class="form-control"  /></td>
+                    <td><input type="text" ng-model="formData.password" class="form-control" /></td>
+                    <td><input type="text" ng-model="formData.title" class="form-control" /></td>
+                    <td><input type="text" ng-model="formData.primary_phone" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.email" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.account_type" class="form-control" /></td>
                     <td>
-                        <input type="hidden" ng-model="formData.data.uid" />
+                        <input type="hidden" ng-model="formData.data.user_id" />
                         <button type="button" class="btn btn-info btn-sm" ng-click="editData()">Save</button>
                         <button type="button" class="btn btn-default btn-sm" ng-click="reset()">Cancel</button>
                     </td>
@@ -98,7 +102,7 @@ app.controller('liveController', function($scope, $http){
     $scope.success = false;
 
     $scope.getTemplate = function(data){
-        if (data.uid === $scope.formData.uid)
+        if (data.user_id === $scope.formData.user_id)
         {
             return 'edit';
         }
@@ -152,13 +156,13 @@ app.controller('liveController', function($scope, $http){
         $scope.success = false;
     };
 
-    $scope.deleteData = function(uid){
+    $scope.deleteData = function(user_id){
         if(confirm("Are you sure you want to remove it?"))
         {
             $http({
                 method:"POST",
                 url:"delete.php",
-                data:{'uid':uid}
+                data:{'user_id':user_id}
             }).success(function(data){
                 $scope.success = true;
                 $scope.successMessage = data.message;
