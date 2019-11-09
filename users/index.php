@@ -50,7 +50,7 @@ if(isset($_SESSION['user_id']) =="") {
                                 <td><input type="text" ng-model="addData.title" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
 
                                 <td>
-                                        <select ng-model="addData.dept_id">
+                                        <select ng-model="addData.dept_id" ng-required="true">
                                             <option>Select</option>
                                             <?php 
 
@@ -73,7 +73,7 @@ if(isset($_SESSION['user_id']) =="") {
                                 </td>
 
                                 <td>
-                                        <select ng-model="addData.location_id">
+                                        <select ng-model="addData.location_id" ng-required="true">
                                             <option>Select</option>
                                             <?php 
 
