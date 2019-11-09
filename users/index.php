@@ -87,9 +87,9 @@ if(isset($_SESSION['user_id']) =="") {
                                                 $result = mysqli_query($conn, $sqli);
 
                                                 while ($row = mysqli_fetch_array($result)) {
-                                                $location = $row['location'];
+                                                $location_name = $row['location_name'];
                                                 $dlid = $row['location_id'];
-                                                echo "<option value='$dlid'>$location</option>";
+                                                echo "<option value='$dlid'>$location_name</option>";
                                                 }
                                             ?>
                                             </select>
