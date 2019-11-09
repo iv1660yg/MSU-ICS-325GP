@@ -13,6 +13,8 @@ $data = array(
     ':lastname'  => $form_data->lastname,
     ':password'  => $form_data->password,
     ':title'  => $form_data->title,
+    ':dept_id'  => $form_data->dept_id,
+    ':location_id'  => $form_data->location_id,
     ':primary_phone'  => $form_data->primary_phone,
     ':email'  => $form_data->email,  
     ':userType'  => $form_data->userType
@@ -20,8 +22,8 @@ $data = array(
 
 $query = "
  INSERT INTO users 
- (firstname, lastname, password, title, primary_phone, email, userType) VALUES 
- (:firstname, :lastname, md5(:password), :title, :primary_phone, :email, :userType)
+ (firstname, lastname, password, title, dept_id,location_id,  primary_phone, email, userType) VALUES 
+ (:firstname, :lastname, md5(:password), :title, :dept_id, :location_id, :primary_phone, :email, :userType)
 ";
 
 $statement = $connect->prepare($query);
