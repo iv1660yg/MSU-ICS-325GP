@@ -15,7 +15,7 @@ if(isset($_SESSION['user_id']) =="") {
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>  
 </head>
 
-  	<fieldset>
+
     <body>  
         <div class="manage-page">  
         <div>
@@ -147,7 +147,7 @@ if(isset($_SESSION['user_id']) =="") {
    </div>  
   </div>
     </body>  
-	  </fieldset>
+
 
 <script>
 var app = angular.module('liveApp', []);
