@@ -14,7 +14,12 @@ $statement = $connect->prepare($query);
 if($statement->execute())
 {
  $message = 'Data Deleted';
-}
+}else {
+    
+    $message = 'Error unable to delete data';
+
+} 
+
 
 $output = array(
  'message' => $message

@@ -29,7 +29,12 @@ $statement = $connect->prepare($query);
 if($statement->execute($data))
 {
  $message = 'Data Edited';
+}else {
+    
+    $message = 'Error unable to edit data';
+
 }
+
 
 $output = array(
  'message' => $message

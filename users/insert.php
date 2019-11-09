@@ -29,7 +29,12 @@ $statement = $connect->prepare($query);
 if($statement->execute($data))
 {
  $message = 'Data Inserted';
+}else {
+    
+    $message = 'Error unable to insert data';
+
 }
+
 
 $output = array(
  'message' => $message
