@@ -17,7 +17,7 @@ if(isset($_SESSION['user_id']) =="") {
 
   	<fieldset>
     <body>  
-        <div class="">  
+        <div class="manage-page">  
    <br />
             <h3 align="center">Manage Users</h3><br />
    <div class="table-responsive" ng-app="liveApp" ng-controller="liveController" ng-init="fetchData()">
