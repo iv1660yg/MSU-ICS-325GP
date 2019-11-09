@@ -34,6 +34,8 @@ if(isset($_SESSION['user_id']) =="") {
                                 <th>Last Name</th>
                                 <th>Password</th>
                                 <th>title</th>
+                                <th>Department</th>
+                                <th>Location</th>
                                 <th>Phone</th>
                                 <th>Email</th>
                                 <th>User Type</th>
@@ -46,6 +48,56 @@ if(isset($_SESSION['user_id']) =="") {
                                 <td><input type="text" ng-model="addData.lastname" class="form-control" placeholder="Enter Last Name" ng-required="true" /></td>
                                 <td><input type="password" ng-model="addData.password" class="form-control" placeholder="Enter Password" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.title" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
+
+                                <td>
+                                        <select ng-model="addData.dept_id">
+                                            <option>Select</option>
+                                            <?php 
+
+                                                include_once("../db_connect.php");
+
+
+                                                //delcare var and set its value to sql query
+                                                $sqli = "SELECT * FROM department";
+
+                            
+                                                $result = mysqli_query($conn, $sqli);
+
+                                                while ($row = mysqli_fetch_array($result)) {
+                                                $department = $row['department'];
+                                                $dpid = $row['dept_id'];
+                                                echo "<option value='$dpid'>$department</option>";
+                                                }
+                                            ?>
+                                            </select>
+                                </td>
+
+                                <td>
+                                        <select ng-model="addData.location_id">
+                                            <option>Select</option>
+                                            <?php 
+
+                                                include_once("../db_connect.php");
+
+
+                                                //delcare var and set its value to sql query
+                                                $sqli = "SELECT * FROM location ";
+
+                            
+                                                $result = mysqli_query($conn, $sqli);
+
+                                                while ($row = mysqli_fetch_array($result)) {
+                                                $location = $row['location'];
+                                                $dlid = $row['location_id'];
+                                                echo "<option value='$dlid'>$location</option>";
+                                                }
+                                            ?>
+                                            </select>
+                                </td>
+
+
+
+
                                 <td><input type="text" ng-model="addData.primary_phone" class="form-control" placeholder="Enter Phone#" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.email" class="form-control" placeholder="Enter Email" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.userType" class="form-control" placeholder=Enter Account Type" ng-required="true" /></td>
@@ -66,6 +118,8 @@ if(isset($_SESSION['user_id']) =="") {
                     <td>{{data.lastname}}</td>
                     <td>{{data.password}}</td>
                     <td>{{data.title}}</td>
+                    <td>{{data.dept_id}}</td>
+                    <td>{{data.location_id}}</td>
                     <td>{{data.primary_phone}}</td>
                     <td>{{data.email}}</td>
                     <td>{{data.userType}}</td>
@@ -79,6 +133,8 @@ if(isset($_SESSION['user_id']) =="") {
                     <td><input type="text" ng-model="formData.lastname" class="form-control"  /></td>
                     <td><input type="text" ng-model="formData.password" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.title" class="form-control" /></td>
+                    <td><input type="text" ng-model="formData.dept_id" class="form-control" /></td>
+                    <td><input type="text" ng-model="formData.location_id" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.primary_phone" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.email" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.userType" class="form-control" /></td>
