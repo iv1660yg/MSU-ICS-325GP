@@ -41,7 +41,6 @@ if(isset($_SESSION['user_id']) =="") {
                         </thead>
                        
                         <tbody>
-                            <!--
                             <tr>
                                 <td><input type="text" ng-model="addData.firstname" class="form-control" placeholder="Enter First Name" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.lastname" class="form-control" placeholder="Enter Last Name" ng-required="true" /></td>
@@ -57,7 +56,7 @@ if(isset($_SESSION['user_id']) =="") {
                             </tr>
                             <tr ng-repeat="data in namesData" ng-include="getTemplate(data)">
                             </tr>
-                            //-->
+                          
                         </tbody>
                        
                     </table>
