@@ -75,14 +75,14 @@ body {
 <?php if ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="admin" ) )) { ?>
 
 <div class="navbar">
-  <a href="index.php">Home</a>
+  <a href="../index.php">Home</a>
   <div class="dropdown">
     <button class="dropbtn">Search 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="searchuser.php">Search User</a>
-      <a href="searchasset.php">Search Assets</a>
+      <a href="../searchuser.php">Search User</a>
+      <a href="../searchasset.php">Search Assets</a>
     </div> 
   </div>
   <div class="dropdown">
@@ -101,8 +101,8 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="profile.php">View Profile</a>
-      <a href="changepassword.php">Change Password</a>
+      <a href="../profile.php">View Profile</a>
+      <a href="../changepassword.php">Change Password</a>
     </div> 
   </div>
   <a href="logout.php">Logout</a>
@@ -111,14 +111,14 @@ body {
 <!––if login user is tech-->
 <?php } elseif ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="tech" ) )) { ?>
 <div class="navbar">
-  <a href="index.php">Home</a>
+  <a href="../index.php">Home</a>
   <div class="dropdown">
     <button class="dropbtn">Search 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="searchuser.php">Search User</a>
-      <a href="searchasset.php">Search Assets</a>
+      <a href="../searchuser.php">Search User</a>
+      <a href="../searchasset.php">Search Assets</a>
     </div> 
   </div>
   <div class="dropdown">
@@ -135,24 +135,24 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="profile.php">View Profile</a>
-      <a href="changepassword.php">Change Password</a>
+      <a href="../profile.php">View Profile</a>
+      <a href="../changepassword.php">Change Password</a>
     </div> 
   </div>
-  <a href="logout.php">Logout</a>
+  <a href="../logout.php">Logout</a>
 </div>
 <!––if login user is enduser-->
 <?php } elseif ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="enduser" ) )) { ?>
 
 <div class="navbar">
-  <a href="index.php">Home</a>
+  <a href="../index.php">Home</a>
   <div class="dropdown">
     <button class="dropbtn">Search 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="searchuser.php">Search User</a>
-      <a href="searchasset.php">Search Assets</a>
+      <a href="../searchuser.php">Search User</a>
+      <a href="../searchasset.php">Search Assets</a>
     </div> 
   </div>
   <div class="dropdown">
@@ -169,19 +169,19 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="profile.php">View Profile</a>
-      <a href="changepassword.php">Change Password</a>
+      <a href="../profile.php">View Profile</a>
+      <a href="../changepassword.php">Change Password</a>
     </div> 
   </div>
-  <a href="logout.php">Logout</a>
+  <a href="../logout.php">Logout</a>
 </div>
 
 <!––if no one logged in-->
 <?php } else { ?>
 <div class="navbar">
-  <a href="index.php">Home</a>
-  <a href="register.php">Register</a>
-  <a href="login.php">Login</a>
+  <a href="../index.php">Home</a>
+  <a href="../register.php">Register</a>
+  <a href="../login.php">Login</a>
 </div>
 
 <?php } ?>
