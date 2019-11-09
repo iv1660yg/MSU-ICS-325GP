@@ -39,6 +39,7 @@ if(isset($_SESSION['user_id']) =="") {
                                 <th>User Type</th>
                             </tr>
                         </thead>
+                       <!--
                         <tbody>
                             <tr>
                                 <td><input type="text" ng-model="addData.firstname" class="form-control" placeholder="Enter First Name" ng-required="true" /></td>
@@ -57,6 +58,7 @@ if(isset($_SESSION['user_id']) =="") {
                             </tr>
                             
                         </tbody>
+                       //-->
                     </table>
                 </form>
                 <script type="text/ng-template" id="display">
