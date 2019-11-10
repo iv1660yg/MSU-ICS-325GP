@@ -11,7 +11,7 @@ if(isset($_SESSION['user_id']) =="") {
 
 <head>
   <link rel="stylesheet" href="../css/style.css">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>  *
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>  
 </head>
 <br />
 <br />
