@@ -105,7 +105,7 @@ body {
       <a href="../changepassword.php">Change Password</a>
     </div> 
   </div>
-  <a href="logout.php">Logout</a>
+  <a href="../logout.php">Logout</a>
 </div>
 
 <!––if login user is tech-->
