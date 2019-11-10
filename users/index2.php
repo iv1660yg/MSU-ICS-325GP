@@ -16,7 +16,7 @@ if(isset($_SESSION['user_id']) =="") {
 </head>
 <br />
 <br />
-<br />
+<br /> 
 
 
     <div class="manage-page">  
