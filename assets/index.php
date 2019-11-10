@@ -73,7 +73,7 @@ if(isset($_SESSION['user_id']) =="") {
                                 <td><input type="text" ng-model="addData.asset_status" class="form-control" placeholder="Enter Password" ng-required="true" /></td>
                                 <td>
                                         <select ng-model="addData.user_id" ng-required="true">
-                                            <option>Select</option>
+                                            <option value="">Select</option>
                                             <?php 
 
                                                 include_once("../db_connect.php");

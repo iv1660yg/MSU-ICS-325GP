@@ -52,7 +52,7 @@ if(isset($_SESSION['user_id']) =="") {
 
                                 <td>
                                         <select ng-model="addData.dept_id" ng-required="true">
-                                            <option>Select</option>
+                                            <option value="">Select</option>
                                             <?php 
 
                                                 include_once("../db_connect.php");
@@ -75,7 +75,7 @@ if(isset($_SESSION['user_id']) =="") {
 
                                 <td>
                                         <select ng-model="addData.location_id" ng-required="true">
-                                            <option>Select</option>
+                                            <option value="">Select</option>
                                             <?php 
 
                                                 include_once("../db_connect.php");
