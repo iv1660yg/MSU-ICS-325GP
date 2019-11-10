@@ -8,12 +8,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar {
+.navbar2 {
   overflow: hidden;
   background-color: #333;
 }
 
-.navbar a {
+.navbar2 a {
   float: left;
   font-size: 16px;
   color: white;
@@ -22,12 +22,12 @@ body {
   text-decoration: none;
 }
 
-.dropdown {
+.dropdown2 {
   float: left;
   overflow: hidden;
 }
 
-.dropdown .dropbtn {
+.dropdown2 .dropbtn {
   font-size: 16px;  
   border: none;
   outline: none;
@@ -38,11 +38,11 @@ body {
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar2 a:hover, .dropdown2:hover .dropbtn {
   background-color: green;
 }
 
-.dropdown-content {
+.dropdown2-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -51,7 +51,7 @@ body {
   z-index: 5;
 }
 
-.dropdown-content a {
+.dropdown2-content a {
   float: none;
   color: black;
   padding: 12px 16px;
@@ -60,11 +60,11 @@ body {
   text-align: left;
 }
 
-.dropdown-content a:hover {
+.dropdown2-content a:hover {
   background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown2:hover .dropdown2-content {
   display: block;
 }
 </style>
@@ -74,33 +74,33 @@ body {
 <!––if login user is admin-->
 <?php if ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="admin" ) )) { ?>
 
-<div class="navbar">
+<div class="navbar2">
   <a href="../index.php">Home</a>
-  <div class="dropdown">
+  <div class="dropdown2">
     <button class="dropbtn">Search 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+    <div class="dropdown2-content">
       <a href="../searchuser.php">Search User</a>
       <a href="../searchasset.php">Search Assets</a>
     </div> 
   </div>
-  <div class="dropdown">
+  <div class="dropdown2">
     <button class="dropbtn">Manage 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+    <div class="dropdown2-content">
       <a href="../users/index.php">Users</a>
       <a href="#">Assets</a>
       <a href="#">Models</a>
       <a href="#">Suppliers</a>
     </div> 
   </div>
-  <div class="dropdown">
+  <div class="dropdown2">
     <button class="dropbtn">Profile 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+    <div class="dropdown2-content">
       <a href="../profile.php">View Profile</a>
       <a href="../changepassword.php">Change Password</a>
     </div> 
@@ -110,31 +110,31 @@ body {
 
 <!––if login user is tech-->
 <?php } elseif ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="tech" ) )) { ?>
-<div class="navbar">
+<div class="navbar2">
   <a href="../index.php">Home</a>
-  <div class="dropdown">
+  <div class="dropdown2">
     <button class="dropbtn">Search 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+    <div class="dropdown2-content">
       <a href="../searchuser.php">Search User</a>
       <a href="../searchasset.php">Search Assets</a>
     </div> 
   </div>
-  <div class="dropdown">
+  <div class="dropdown2">
     <button class="dropbtn">Update 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+    <div class="dropdown2-content">
       <a href="#">Assets</a>
       <a href="#">Models</a>
     </div> 
   </div>
-  <div class="dropdown">
+  <div class="dropdown2">
     <button class="dropbtn">Profile 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+    <div class="dropdown2-content">
       <a href="../profile.php">View Profile</a>
       <a href="../changepassword.php">Change Password</a>
     </div> 
@@ -144,31 +144,31 @@ body {
 <!––if login user is enduser-->
 <?php } elseif ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="enduser" ) )) { ?>
 
-<div class="navbar">
+<div class="navbar2">
   <a href="../index.php">Home</a>
-  <div class="dropdown">
+  <div class="dropdown2">
     <button class="dropbtn">Search 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+    <div class="dropdown2-content">
       <a href="../searchuser.php">Search User</a>
       <a href="../searchasset.php">Search Assets</a>
     </div> 
   </div>
-  <div class="dropdown">
+  <div class="dropdown2">
     <button class="dropbtn">View 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+    <div class="dropdown2-content">
       <a href="#">Assets</a>
       <a href="#">Models</a>
     </div> 
   </div>
-  <div class="dropdown">
+  <div class="dropdown2">
     <button class="dropbtn">Profile 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+    <div class="dropdown2-content">
       <a href="../profile.php">View Profile</a>
       <a href="../changepassword.php">Change Password</a>
     </div> 
@@ -178,7 +178,7 @@ body {
 
 <!––if no one logged in-->
 <?php } else { ?>
-<div class="navbar">
+<div class="navbar2">
   <a href="../index.php">Home</a>
   <a href="../register.php">Register</a>
   <a href="../login.php">Login</a>
