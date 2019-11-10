@@ -14,10 +14,11 @@ if(isset($_SESSION['user_id']) =="") {
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>  
 </head>
+<br />
+<br />
+<br />
 
-
-     
-        <div class="manage-page">  
+    <div class="manage-page">  
         <div>
    <br />
             <h3 align="center">Manage Users</h3><br />
