@@ -143,7 +143,7 @@ if(isset($_SESSION['user_id']) =="") {
                         <button type="button" class="btn btn-default btn-sm" ng-click="reset()">Cancel</button>
                     </td>
                 </script>         
-
+ 
 
 <script>
 var app = angular.module('liveApp', []);
