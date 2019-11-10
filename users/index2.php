@@ -19,7 +19,10 @@ if(isset($_SESSION['user_id']) =="") {
 <br /> 
 
 
-
+    <div class="manage-page">  
+        <div>
+   <br />
+            <h3 align="center">Manage Users</h3><br />
    <div class="table-responsive" ng-app="liveApp" ng-controller="liveController" ng-init="fetchData()">
                 <div class="alert alert-success alert-dismissible" ng-show="success" >
                     <a href="#" class="close" data-dismiss="alert" ng-click="closeMsg()" aria-label="close">&times;</a>
@@ -143,7 +146,9 @@ if(isset($_SESSION['user_id']) =="") {
                         <button type="button" class="btn btn-default btn-sm" ng-click="reset()">Cancel</button>
                     </td>
                 </script>         
- 
+   </div>  
+  </div>
+
 
 <script>
 var app = angular.module('liveApp', []);
