@@ -50,7 +50,7 @@ if(isset($_SESSION['user_id']) =="") {
                                 <td><input type="text" ng-model="addData.serialnumber" class="form-control" placeholder="Enter First Name" ng-required="true" /></td>
                                 <td>
                                         <select ng-model="addData.model_id" ng-required="true">
-                                            <option value="none"selected disabled hidden>Select</option>
+                                            <option value="">Select</option>
                                             <?php 
 
                                                 include_once("../db_connect.php");

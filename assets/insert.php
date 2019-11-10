@@ -9,21 +9,22 @@ $message = '';
 $form_data = json_decode(file_get_contents("php://input"));
 
 $data = array(
-    ':firstname'  => $form_data->firstname,
-    ':lastname'  => $form_data->lastname,
-    ':password'  => $form_data->password,
-    ':title'  => $form_data->title,
-    ':dept_id'  => $form_data->dept_id,
-    ':location_id'  => $form_data->location_id,
-    ':primary_phone'  => $form_data->primary_phone,
-    ':email'  => $form_data->email,  
-    ':userType'  => $form_data->userType
+    ':serialnumber'  => $form_data->serialnumber,
+    ':model_id'  => $form_data->model_id,
+    ':asset_status'  => $form_data->asset_status,
+    ':user_id'  => $form_data->user_id,
+    ':acquisition_method'  => $form_data->acquisition_method,
+    ':unit_price'  => $form_data->unit_price,
+    ':monthly_rental_price'  => $form_data->monthly_rental_price,
+    ':warranty_start_date'  => $form_data->warranty_start_date,  
+    ':warranty_end_date'  => $form_data->warranty_end_date,
+    ':lease_end_date'  => $form_data->lease_end_date
 );
 
 $query = "
- INSERT INTO users 
- (firstname, lastname, password, title, dept_id,location_id,  primary_phone, email, userType) VALUES 
- (:firstname, :lastname, md5(:password), :title, :dept_id, :location_id, :primary_phone, :email, :userType)
+ INSERT INTO assets 
+ (serialnumber, model_id, asset_status, user_id, acquisition_method,unit_price,  monthly_rental_price, warranty_start_date, warranty_end_date,lease_end_date) VALUES 
+ (:serialnumber, :model_id, :asset_status, :user_id, :acquisition_method, :unit_price, :monthly_rental_price, :warranty_start_date, :warranty_end_date, :lease_end_date)
 ";
 
 $statement = $connect->prepare($query);

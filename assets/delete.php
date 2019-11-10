@@ -8,7 +8,7 @@ $message = '';
 
 $form_data = json_decode(file_get_contents("php://input"));
 
-$query = "DELETE FROM users WHERE user_id = '".$form_data->user_id."'";
+$query = "DELETE FROM assets WHERE asset_id = '".$form_data->asset_id."'";
 
 $statement = $connect->prepare($query);
 if($statement->execute())
