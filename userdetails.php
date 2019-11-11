@@ -36,7 +36,7 @@ $primary_phone = $row['primary_phone'];
                 
 	
 				<div class="main-page">
-				<div class="form">
+				<div class="">
 
 					<fieldset>
 					<legend>Employee Profile</legend>	
