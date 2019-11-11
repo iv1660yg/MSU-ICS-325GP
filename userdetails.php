@@ -5,7 +5,7 @@ include_once("db_connect.php");
 
 if (!empty($_GET)){
 
-	$userID = (int) $_GET['user_id'];
+	$userID = (int) $_GET['id'];
 }
 
 $result = mysqli_query($conn, "SELECT * FROM users WHERE user_id = '" . $userID. "' ");
