@@ -40,7 +40,7 @@ $primary_phone = $row['primary_phone'];
 
 					<fieldset>
 					<legend>Employee Profile</legend>	
-					<table>
+					<table align=right>
 						<tr>
 							<td>UserID</td>
 							<td><?php echo $userID  ?></td>
