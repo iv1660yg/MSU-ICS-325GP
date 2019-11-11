@@ -47,7 +47,7 @@ if(!empty($_POST['keyword'] && preg_match("/^[a-zA-Z0-9 ]+$/",$_POST["keyword"])
       
      for($i = 1; $i < count($aKeyword); $i++) {
         if(!empty($aKeyword[$i])) {
-          $query .= " OR movietitle like '%" . $aKeyword[$i] . "%'";
+          $query .= " OR serialnumber like '%" . $aKeyword[$i] . "%'";
         }
       }
      
@@ -63,7 +63,7 @@ if(!empty($_POST['keyword'] && preg_match("/^[a-zA-Z0-9 ]+$/",$_POST["keyword"])
         echo "<br><tr>";
         While($row = $result->fetch_assoc()) {   
             $row_count++;                         
-            echo "<tr><td> Result ".$row_count." </td> <td><a href=userdetails.php?id=".$row['user_id'].">" . $row['firstname'] . " " . $row['lastname'] ."</a><td></tr>";
+            echo "<tr><td> Result ".$row_count." </td> <td><a href=assetdetails.php?id=".$row['asset_id'].">" . $row['serialnumber'] ."</a><td></tr>";
         }
         echo "</tr>";
     }
