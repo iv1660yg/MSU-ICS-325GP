@@ -159,7 +159,7 @@ app.controller('liveController', function($scope, $http){
     $scope.success = false;
 
     $scope.getTemplate = function(data){
-        if (data.user_id === $scope.formData.user_id)
+        if (data.asset_id === $scope.formData.asset_id)
         {
             return 'edit';
         }

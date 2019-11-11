@@ -92,8 +92,8 @@ body {
     <div class="dropdown2-content">
       <a href="../users/index.php">Users</a>
       <a href="../assets/index.php">Assets</a>
-      <a href="#">Models</a>
-      <a href="#">Suppliers</a>
+      <a href="../models/index.php">Models</a>
+      <a href="../suppliers/index.php">Suppliers</a>
     </div> 
   </div>
   <div class="dropdown2">
