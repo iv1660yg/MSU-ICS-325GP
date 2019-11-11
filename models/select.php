@@ -4,7 +4,7 @@
  
 include('database_connection.php');
 
-$query = "SELECT * FROM users ORDER BY user_id DESC";
+$query = "SELECT * FROM model ORDER BY model_id DESC";
 $statement = $connect->prepare($query);
 if($statement->execute())
 {
