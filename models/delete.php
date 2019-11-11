@@ -8,7 +8,7 @@ $message = '';
 
 $form_data = json_decode(file_get_contents("php://input"));
 
-$query = "DELETE FROM model WHERE asset_id = '".$form_data->asset_id."'";
+$query = "DELETE FROM model WHERE model_id = '".$form_data->model_id."'";
 
 $statement = $connect->prepare($query);
 if($statement->execute())

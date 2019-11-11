@@ -14,13 +14,13 @@ $data = array(
  ':category_type'  => $form_data->category_type,
  ':model_status'  => $form_data->model_status,
  ':supplier_id'  => $form_data->supplier_id,
- ':asset_id'    => $form_data->asset_id
+ ':model_id'    => $form_data->model_id
 );
 
 $query = "
  UPDATE model 
  SET model_number = :model_number, model_name = :model_name, category_type = :category_type, model_status = :model_status, supplier_id = :supplier_id  
- WHERE asset_id = :asset_id
+ WHERE model_id = :model_id
 ";
 
 $statement = $connect->prepare($query);
