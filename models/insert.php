@@ -13,14 +13,14 @@ $data = array(
     ':model_name'  => $form_data->model_name,
     ':category_type'  => $form_data->category_type,
     ':model_status'  => $form_data->model_status,
-    ':supplier_id'  => $form_data->supplier_id,
+    ':supplier_id'  => $form_data->supplier_id
 
 );
 
 $query = "
- INSERT INTO users 
+ INSERT INTO model 
  (model_number, model_name, category_type, model_status, supplier_id ) VALUES 
- (:model_number, :model_name, category_type, :model_status, :supplier_id )
+ (:model_number, :model_name, :category_type, :model_status, :supplier_id )
 ";
 
 $statement = $connect->prepare($query);
