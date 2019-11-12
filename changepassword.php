@@ -9,10 +9,16 @@ if(isset($_SESSION['user_id']) =="") {
 
 if (isset($_POST['updatepassword'])) {
 		
+		$password0 = $_SESSION['password'];
 		$password1 = $_POST['password1'] ;
 		$password2 = $_POST['password2'] ;
 
-		if ($password1 == $password2) {
+
+		if ($password0 == $password1) {
+			$error_message = "Error new password can not old match!";
+		}
+
+		elseif ($password1 == $password2) {
 
 			// include mysql conection 
 			include_once("db_connect.php");
@@ -25,11 +31,15 @@ if (isset($_POST['updatepassword'])) {
 				$error_message = "System Error";
 			}
 		}
+	
+
 		else {
 
 			$error_message = "Error password does not match!";
 
 		}
+		
+
 
 	} else {
 		$error_message = "";
