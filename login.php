@@ -39,7 +39,7 @@ if (isset($_POST['login'])) {
       <input type="text" name="email" placeholder="email" required class="form-control" />
       <input type="password" name="password" placeholder="password" required class="form-control" />
       <button type="submit" name="login">login</button>
-      <p class="message">Not registered? <a href="register.php">Create an account</a></p>
+    <?php /* <p class="message">Not registered? <a href="register.php">Create an account</a></p> */ ?>
 	  </fieldset>
     </form>
   </div>
