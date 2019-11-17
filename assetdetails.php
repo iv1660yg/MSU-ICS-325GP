@@ -67,8 +67,6 @@ $primary_phone = $row['primary_phone'];
 							<td><?php echo $title ?></td>
 						</tr>
 					</table>
-					
-
 					</fieldset>
 				</div>
 
