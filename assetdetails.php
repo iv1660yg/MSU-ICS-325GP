@@ -12,7 +12,7 @@ $result = mysqli_query($conn, "SELECT * FROM assets join users using (user_id) W
 $row = mysqli_fetch_array($result);
 $aSid = $row['asset_id'];
 $serialnumber = $row['serialnumber'];
-
+$userID = $row['user_id'];
 $userType = $row['userType'];	
 $firstname = $row['firstname'];
 $middle = $row['middle'];	
@@ -46,7 +46,7 @@ $assignto = $firstname." ".$lastname;
 
 					<fieldset>
 					<legend>Asset Information</legend>	
-					<table>
+					<table align=right>
 						<tr>
 							<td>Asset ID:</td>
 							<td><?php echo $aID ?></td>
@@ -65,7 +65,7 @@ $assignto = $firstname." ".$lastname;
 						</tr>
 						<tr>
 							<td>Asset Assgined To:</td>
-							<td><?php echo "<a href=userdetails.php?id=".$aSid.">".$assignto."</a>"  ?></td>
+							<td><?php echo "<a href=userdetails.php?id=".$userID.">".$assignto."</a>"  ?></td>
 						</tr>
 						<tr>
 							<td>Email:</td>
