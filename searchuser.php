@@ -23,7 +23,7 @@ if (empty($_POST["keyword"])) {
   	<fieldset>
 	<legend>Search Users</legend>	
     <form class="login-form" role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
-      <input type="text" name="keyword" placeholder="keyword" required class="form-control" />
+      <input type="text" name="keyword" placeholder="Enter A Name" required class="form-control" />
       <button type="submit" name="search">Search Users</button>
 	  <?php echo "<BR>" .$error_message ?>
 
