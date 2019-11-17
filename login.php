@@ -36,7 +36,7 @@ if (isset($_POST['login'])) {
   	<fieldset>
 	<legend>Employee Login</legend>	
     <form class="login-form" role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
-      <input type="text" name="email" placeholder="email" required class="form-control" />
+      <input type="email" name="email" placeholder="email"  pattern=".+@midtowntech.com" size="30" required class="form-control" />
       <input type="password" name="password" placeholder="password" required class="form-control" />
       <button type="submit" name="login">login</button>
 	  <?php echo "<BR>" .$error_message ?>
