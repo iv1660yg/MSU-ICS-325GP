@@ -35,10 +35,6 @@ $assignto = $firstname." ".$lastname;
 <head>
   <link rel="stylesheet" href="css/style.css">
 </head>
-	<h2 align=center>MidTown Tech</h2>	
-		
-		<br>
-		<br>
                 
 	
 				<div class="main-page">

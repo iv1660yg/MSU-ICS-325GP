@@ -10,10 +10,7 @@ include_once("db_connect.php");
 <head>
   <link rel="stylesheet" href="css/style.css">
 </head>
-	<h2 align=center>MidTown Tech</h2>	
-		
-		<br>
-		<br>
+
 				<?php if ((isset($_SESSION['user_id']) )) { ?>
                 
 	

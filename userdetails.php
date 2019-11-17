@@ -28,11 +28,7 @@ $primary_phone = $row['primary_phone'];
 <head>
   <link rel="stylesheet" href="css/style.css">
 </head>
-	<h2 align=center>MidTown Tech</h2>	
-		
-		<br>
-		<br>
-				<?php if ((isset($_SESSION['user_id']) )) { ?>
+	<?php if ((isset($_SESSION['user_id']) )) { ?>
                 
 	
 				<div class="main-page">
