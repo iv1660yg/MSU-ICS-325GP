@@ -10,8 +10,7 @@ if (!empty($_GET)){
 
 $result = mysqli_query($conn, "SELECT * FROM assets join users using (user_id) WHERE asset_id = '" . $aID. "' ");
 $row = mysqli_fetch_array($result);
-$uid = $row['asset_id'];
-$assignto = $row['firstname']. " " .row['lastname'];
+$aSid = $row['asset_id'];
 $serialnumber = $row['serialnumber'];
 
 $userType = $row['userType'];	
@@ -23,9 +22,11 @@ $title = $row['title'];
 $managed_byID = $row['managed_by'];
 $dept_id = $row['dept_id'];
 $location_id = $row['location_id'];	
-$primary_phone = $row['primary_phone'];						
+$primary_phone = $row['primary_phone'];
+$price = $row['unit_price'];
+$rental= $row['monthly_rental_price'];						
 
-?>
+$assignto = $firstname." ".$lastname;
 
 
 ?>
@@ -55,15 +56,23 @@ $primary_phone = $row['primary_phone'];
 							<td><?php echo $serialnumber ?></td>
 						</tr>
 						<tr>
-							<td>Asset Assgined To:</td>
-							<td><?php echo $assignto  ?></td>
+							<td>Unit Price:</td>
+							<td><?php echo $price ?></td>
 						</tr>
 						<tr>
-							<td>Email</td>
+							<td>Rental Price:</td>
+							<td><?php echo $rental ?></td>
+						</tr>
+						<tr>
+							<td>Asset Assgined To:</td>
+							<td><?php echo "<a href=userdetails.php?id=".$aSid.">".$assignto."</a>"  ?></td>
+						</tr>
+						<tr>
+							<td>Email:</td>
 							<td><?php echo $email ?></td>
 						</tr>
 						<tr>
-							<td>Title</td>
+							<td>Title:</td>
 							<td><?php echo $title ?></td>
 						</tr>
 					</table>
