@@ -3,6 +3,30 @@ session_start();
 include('header.php');
 include_once("db_connect.php");
 
+if (!empty($_GET)){
+
+	$aID = (int) $_GET['id'];
+}
+
+$result = mysqli_query($conn, "SELECT * FROM assets join users using (user_id) WHERE asset_id = '" . $aID. "' ");
+$row = mysqli_fetch_array($result);
+$uid = $row['asset_id'];
+$assignto = $row['firstname']. " " .row['lastname'];
+$serialnumber = $row['serialnumber'];
+
+$userType = $row['userType'];	
+$firstname = $row['firstname'];
+$middle = $row['middle'];	
+$lastname = $row['lastname'];	
+$email = $row['email'];	
+$title = $row['title'];
+$managed_byID = $row['managed_by'];
+$dept_id = $row['dept_id'];
+$location_id = $row['location_id'];	
+$primary_phone = $row['primary_phone'];						
+
+?>
+
 
 ?>
 
@@ -14,46 +38,34 @@ include_once("db_connect.php");
 		
 		<br>
 		<br>
-				<?php if ((isset($_SESSION['user_id']) )) { ?>
                 
 	
 				<div class="main-page">
 				<div class="form">
 
-				<p class="welcome"><strong>Welcome!</strong> You're signed in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
 					<fieldset>
-					<legend>Employee Profile</legend>	
+					<legend>Asset Information</legend>	
 					<table>
 						<tr>
-							<td>UserID</td>
-							<td><?php echo  ?></td>
+							<td>Asset ID:</td>
+							<td><?php echo $aID ?></td>
 						</tr>
 						<tr>
-							<td>First Name</td>
-							<td><?php echo  ?></td>
+							<td>Serial Number:</td>
+							<td><?php echo $serialnumber ?></td>
 						</tr>
 						<tr>
-							<td>Middle Name</td>
-							<td><?php echo  ?></td>
-						</tr>
-						</tr>
-						<tr>
-							<td>Last Name</td>
-							<td><?php echo  ?></td>
+							<td>Asset Assgined To:</td>
+							<td><?php echo $assignto  ?></td>
 						</tr>
 						<tr>
 							<td>Email</td>
-							<td><?php echo  ?></td>
+							<td><?php echo $email ?></td>
 						</tr>
 						<tr>
 							<td>Title</td>
-							<td><?php echo  ?></td>
+							<td><?php echo $title ?></td>
 						</tr>
-						<tr>
-							<td>Phone Number</td>
-							<td><?php echo ?></td>
-						</tr>
-
 					</table>
 					
 
@@ -61,6 +73,5 @@ include_once("db_connect.php");
 				</div>
 
 
-				<?php } ?>
 		
 		
