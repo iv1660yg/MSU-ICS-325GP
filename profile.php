@@ -17,7 +17,7 @@ include_once("db_connect.php");
 				<?php if ((isset($_SESSION['user_id']) )) { ?>
                 
 	
-				<div class="login-page">
+				<div class="main-page">
 				<div class="form">
 
 				<p class="welcome"><strong>Welcome!</strong> You're signed in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
