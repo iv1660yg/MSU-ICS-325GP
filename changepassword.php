@@ -50,8 +50,6 @@ if (isset($_POST['updatepassword'])) {
 
 <head>
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://code.jquery.com/jquery-1.7.min.js"></script>
-<script src="script.js"></script>
 </head>
 <div class="login-page">
   <div class="form">
