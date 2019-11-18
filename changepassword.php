@@ -58,8 +58,8 @@ if (isset($_POST['updatepassword'])) {
   	<fieldset>
 	<legend>Change Password</legend>	
     <form class="login-form" role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
-      <input type="password" name="password1" placeholder="new password" required class="form-control" />
-      <input type="password" id="pswd" name="password2" placeholder="confirm password" required class="form-control" />
+      <input type="password" name="password1" placeholder="new password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-control" />
+      <input type="password" id="pswd" name="password2" placeholder="confirm password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-control" />
       <button type="submit" name="updatepassword">Change Password</button>
 	  <?php echo "<BR>" .$error_message ?>
 	  <div id="pswd_info">
