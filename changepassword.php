@@ -60,7 +60,9 @@ if (isset($_POST['updatepassword'])) {
       <input type="password" name="password2" placeholder="confirm password" required class="form-control" />
       <button type="submit" name="updatepassword">Change Password</button>
 	  <?php echo "<BR>" .$error_message ?>
-		<div id="pswd_info">
+	  </fieldset>
+	</form>
+	<div id="pswd_info">
 			<h4>Password must meet the following requirements:</h4>
 			<ul>
 				<li id="letter" class="invalid">At least <strong>one letter</strong></li>
@@ -69,7 +71,5 @@ if (isset($_POST['updatepassword'])) {
 				<li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
 			</ul>
 		</div>
-	  </fieldset>
-    </form>
   </div>
 </div>
