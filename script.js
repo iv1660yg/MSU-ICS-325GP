@@ -2,15 +2,19 @@ $(document).ready(function() {
 
 
     $('input[type=password]').keyup(function() {
-        // keyup code here
+        var pswd = $(this).val();
     }).focus(function() {
         $('#pswd_info').show();
     }).blur(function() {
         $('#pswd_info').hide();
     });
 
-    var pswd = $(this).val();
-
+            //validate the length
+        if ( pswd.length < 8 ) {
+            $('#length').removeClass('valid').addClass('invalid');
+        } else {
+            $('#length').removeClass('invalid').addClass('valid');
+        }
             //validate letter
         if ( pswd.match(/[A-z]/) ) {
             $('#letter').removeClass('invalid').addClass('valid');
