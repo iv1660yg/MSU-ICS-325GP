@@ -31,6 +31,9 @@
   display:block;
 }
 
+#pswd_info {
+  display:none;
+}
 
 
 .login-page {
