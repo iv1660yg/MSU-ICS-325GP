@@ -43,11 +43,11 @@ if(isset($_SESSION['user_id']) =="") {
                         <tbody>
                             <tr>
                                 <td><input type="text" ng-model="addData.supplier_name" class="form-control" placeholder="Enter First Name" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.phone_number" class="form-control" placeholder="Enter Last Name" ng-required="true" /></td>
+                                <td><input type="tel" ng-model="addData.phone_number" class="form-control" placeholder="Enter Last Name" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.street" class="form-control" placeholder="Enter Password" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.city" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.state" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.zip" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
+                                <td><input type="number" ng-model="addData.zip" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
             
 
 
@@ -74,11 +74,11 @@ if(isset($_SESSION['user_id']) =="") {
                 </script>
                 <script type="text/ng-template" id="edit">
                     <td><input type="text" ng-model="formData.supplier_name" class="form-control"  /></td>
-                    <td><input type="text" ng-model="formData.phone_number" class="form-control"  /></td>
+                    <td><input type="tel" ng-model="formData.phone_number" class="form-control"  /></td>
                     <td><input type="text" ng-model="formData.street" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.city" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.state" class="form-control" /></td>
-                    <td><input type="text" ng-model="formData.zip" class="form-control" /></td>
+                    <td><input type="number" ng-model="formData.zip" class="form-control" /></td>
                     <td>
                         <input type="hidden" ng-model="formData.data.supplier_id" />
                         <button type="button" class="btn btn-info btn-sm" ng-click="editData()">Save</button>

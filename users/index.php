@@ -99,8 +99,8 @@ if(isset($_SESSION['user_id']) =="") {
 
 
 
-                                <td><input type="text" ng-model="addData.primary_phone" class="form-control" placeholder="Enter Phone#" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.email" class="form-control" placeholder="Enter Email" ng-required="true" /></td>
+                                <td><input type="tel" ng-model="addData.primary_phone" class="form-control" placeholder="Enter Phone#" ng-required="true" /></td>
+                                <td><input type="email" ng-model="addData.email" class="form-control" placeholder="Enter Email" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.userType" class="form-control" placeholder=Enter Account Type" ng-required="true" /></td>
 
 
@@ -136,7 +136,7 @@ if(isset($_SESSION['user_id']) =="") {
                     <td><input type="text" ng-model="formData.title" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.dept_id" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.location_id" class="form-control" /></td>
-                    <td><input type="text" ng-model="formData.primary_phone" class="form-control" /></td>
+                    <td><input type="tel" ng-model="formData.primary_phone" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.email" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.userType" class="form-control" /></td>
                     <td>
