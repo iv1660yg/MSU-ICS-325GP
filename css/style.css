@@ -2,9 +2,9 @@
 
 #pswd_info {
   position:absolute;
-  bottom:-75px;
+  bottom:-50px;
   bottom: -115px\9; /* IE Specific */
-  right:55px;
+  right:38px;
   width:250px;
   padding:15px;
   background:#fefefe;
@@ -31,6 +31,9 @@
   display:block;
 }
 
+#pswd_info {
+  display:none;
+}
 
 
 .login-page {
