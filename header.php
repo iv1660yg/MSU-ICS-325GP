@@ -179,7 +179,7 @@ body {
 <?php } else { ?>
 <div class="navbar2">
   <a href="../index.php">Home</a>
-  <a href="../register.php">Register</a>
+ <?php /* <a href="../register.php">Register</a> */ ?>
   <a href="../login.php">Login</a>
 </div>
 
