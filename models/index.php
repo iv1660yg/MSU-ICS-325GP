@@ -41,10 +41,10 @@ if(isset($_SESSION['user_id']) =="") {
                        
                         <tbody>
                             <tr>
-                                <td><input type="text" ng-model="addData.model_number" class="form-control" placeholder="Enter First Name" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.model_name" class="form-control" placeholder="Enter Last Name" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.category_type" class="form-control" placeholder="Enter Password" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.model_status" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.model_number" class="form-control" placeholder="Enter Model Number" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.model_name" class="form-control" placeholder="Enter Model Name" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.category_type" class="form-control" placeholder="Enter Category" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.model_status" class="form-control" placeholder="Enter Model Status" ng-required="true" /></td>
 
                                 <td>
                                         <select ng-model="addData.supplier_id" ng-required="true">
