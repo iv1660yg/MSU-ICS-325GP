@@ -42,12 +42,12 @@ if(isset($_SESSION['user_id']) =="") {
                        
                         <tbody>
                             <tr>
-                                <td><input type="text" ng-model="addData.supplier_name" class="form-control" placeholder="Enter First Name" ng-required="true" /></td>
-                                <td><input type="tel" ng-model="addData.phone_number" class="form-control" placeholder="Enter Last Name" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.street" class="form-control" placeholder="Enter Password" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.city" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.state" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
-                                <td><input type="number" ng-model="addData.zip" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.supplier_name" class="form-control" placeholder="Enter Supplier Name" ng-required="true" /></td>
+                                <td><input type="tel" ng-model="addData.phone_number" class="form-control" placeholder="Enter Phone Number" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.street" class="form-control" placeholder="Enter Address" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.city" class="form-control" placeholder="Enter City" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.state" class="form-control" placeholder="Enter State" ng-required="true" /></td>
+                                <td><input type="number" ng-model="addData.zip" class="form-control" placeholder="Enter Zip Code" ng-required="true" /></td>
             
 
 
