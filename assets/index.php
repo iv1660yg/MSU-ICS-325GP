@@ -47,7 +47,7 @@ if(isset($_SESSION['user_id']) =="") {
                        
                         <tbody>
                             <tr>
-                                <td><input type="text" ng-model="addData.serialnumber" class="form-control" placeholder="Enter First Name" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.serialnumber" class="form-control" placeholder="Enter Serial Number" ng-required="true" /></td>
                                 <td>
                                         <select ng-model="addData.model_id" ng-required="true">
                                             <option value="">Select</option>
@@ -70,7 +70,7 @@ if(isset($_SESSION['user_id']) =="") {
                                             ?>
                                             </select>
                                 </td>                                
-                                <td><input type="text" ng-model="addData.asset_status" class="form-control" placeholder="Enter Password" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.asset_status" class="form-control" placeholder="Enter Asset Status" ng-required="true" /></td>
                                 <td>
                                         <select ng-model="addData.user_id" ng-required="true">
                                             <option value="">Select</option>
@@ -93,14 +93,14 @@ if(isset($_SESSION['user_id']) =="") {
                                             ?>
                                             </select>
                                 </td>
-                                <td><input type="text" ng-model="addData.acquisition_method" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.acquisition_method" class="form-control" placeholder="Enter Acquisition Method" ng-required="true" /></td>
 
 
-                                <td><input type="text" ng-model="addData.unit_price" class="form-control" placeholder="Enter Phone#" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.monthly_rental_price" class="form-control" placeholder="Enter Email" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.warranty_start_date" class="form-control" placeholder=Enter Account Type" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.warranty_end_date" class="form-control" placeholder=Enter Account Type" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.lease_end_date" class="form-control" placeholder=Enter Account Type" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.unit_price" class="form-control" placeholder="Enter Unit Price" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.monthly_rental_price" class="form-control" placeholder="Enter Rental Price" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.warranty_start_date" class="form-control" placeholder=Enter Warranty Start" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.warranty_end_date" class="form-control" placeholder=Enter Warranty End" ng-required="true" /></td>
+                                <td><input type="text" ng-model="addData.lease_end_date" class="form-control" placeholder=Enter Lease End" ng-required="true" /></td>
 
 
                                 <td><button type="submit" class="btn btn-success btn-sm" ng-disabled="testform.$invalid">Add</button></td>
