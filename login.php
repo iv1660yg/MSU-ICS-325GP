@@ -39,7 +39,7 @@ if (isset($_POST['login'])) {
       <input type="email" name="email" placeholder="email"  pattern=".+@midtowntech.com" size="30" required class="form-control" title="Email should contain @midtowntech.com address" />
       <input type="password" name="password" placeholder="password" required class="form-control" />
       <button type="submit" name="login">login</button>
-	  <?php echo "<BR>" .$error_message ?>
+	  <font size="3" color="red"><?php echo "<BR>" .$error_message ?></font>
     <?php /* <p class="message">Not registered? <a href="register.php">Create an account</a></p> */ ?>
 	  </fieldset>
     </form>
