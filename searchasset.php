@@ -18,7 +18,7 @@ if (empty($_POST["keyword"])) {
 <head>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<div class="search-page">
+<div class="main-page">
   <div class="form">
   	<fieldset>
 	<legend>Search Assets</legend>	

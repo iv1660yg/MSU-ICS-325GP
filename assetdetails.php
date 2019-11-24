@@ -42,7 +42,7 @@ $assignto = $firstname." ".$lastname;
 
 					<fieldset>
 					<legend>Asset Information</legend>	
-					<table align=right>
+					<table align=left>
 						<tr>
 							<td>Asset ID:</td>
 							<td><?php echo $aID ?></td>
