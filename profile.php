@@ -17,7 +17,7 @@ include_once("db_connect.php");
 				<div class="main-page">
 				<div class="form">
 
-				<p class="welcome"><strong>Welcome!</strong> You're signed in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
+				<p align="center" class="welcome"><strong>Welcome!</strong> You're signed in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
 					<fieldset>
 					<legend>Employee Profile</legend>	
 					<table>
