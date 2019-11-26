@@ -111,7 +111,7 @@ if(isset($_SESSION['user_id']) =="") {
                             </tr>
                             <tr ng-repeat="data in namesData" ng-include="getTemplate(data)">
                             </tr>
-                                <div id="pswd_in">
+                                <div id="pswd_info2">
                                 <h4>Password must meet the following requirements:</h4>
                                 <ul>
                                     <li id="letter" class="invalid">At least <strong>one letter</strong></li>

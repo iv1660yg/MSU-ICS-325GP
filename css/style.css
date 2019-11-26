@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 
-#pswd_in {
+#pswd_info2 {
   position:absolute;
-  bottom:-75px;
+  top:310px;
   bottom: -115px\9; /* IE Specific */
-  right:38px;
+  left:150px;
   width:250px;
   padding:15px;
   background:#fefefe;
@@ -15,12 +15,12 @@
   border:1px solid #ddd;
 }
 
-#pswd_in h4 {
+#pswd_info2 h4 {
   margin:0 0 10px 0;
   padding:0;
   font-weight:normal;
 }
-#pswd_in::before {
+#pswd_info2::before {
   content: "\25B2";
   position:absolute;
   top:-12px;
@@ -33,7 +33,7 @@
 }
 
 
-#pswd_in {
+#pswd_info2 {
   display:none;
 }
 

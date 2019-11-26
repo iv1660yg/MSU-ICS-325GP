@@ -32,8 +32,10 @@ $(document).ready(function() {
                     }
     }).focus(function() {
         $('#pswd_info').show();
+        $('#pswd_info2').show();
     }).blur(function() {
         $('#pswd_info').hide();
+        $('#pswd_info2').hide();
     });
 
 });
