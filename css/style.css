@@ -53,9 +53,9 @@
 
 #pswd_info2 {
   position:absolute;
-  top:310px;
+  bottom:-75px;
   bottom: -115px\9; /* IE Specific */
-  left:150px;
+  right:38px;
   width:250px;
   padding:15px;
   background:#fefefe;
