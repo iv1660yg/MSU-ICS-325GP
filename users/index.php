@@ -12,7 +12,9 @@ if(isset($_SESSION['user_id']) =="") {
 <head>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> 
+  <script src="https://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="../script.js"></script> 
 </head>
 <br />
 <br />
@@ -47,7 +49,7 @@ if(isset($_SESSION['user_id']) =="") {
                             <tr>
                                 <td><input type="text" ng-model="addData.firstname" class="form-control" placeholder="Enter First Name" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.lastname" class="form-control" placeholder="Enter Last Name" ng-required="true" /></td>
-                                <td><input type="password" ng-model="addData.password" class="form-control" placeholder="Enter Password" ng-required="true" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" /></td>
+                                <td><input id="pswd" type="password" ng-model="addData.password" class="form-control" placeholder="Enter Password" ng-required="true" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" /></td>
                                 <td><input type="text" ng-model="addData.title" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
 
                                 <td>
@@ -109,6 +111,15 @@ if(isset($_SESSION['user_id']) =="") {
                             </tr>
                             <tr ng-repeat="data in namesData" ng-include="getTemplate(data)">
                             </tr>
+                                                <div id="pswd_info">
+                                <h4>Password must meet the following requirements:</h4>
+                                <ul>
+                                    <li id="letter" class="invalid">At least <strong>one letter</strong></li>
+                                    <li id="capital" class="invalid">At least <strong>one capital letter</strong></li>
+                                    <li id="number" class="invalid">At least <strong>one number</strong></li>
+                                    <li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
+                                </ul>
+                            </div>
                           
                         </tbody>
                        
