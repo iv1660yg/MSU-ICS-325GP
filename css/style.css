@@ -51,7 +51,7 @@
 
 
 
-#pswd_info2 {
+#pswd_in {
   position:absolute;
   bottom:-75px;
   bottom: -115px\9; /* IE Specific */
@@ -65,12 +65,12 @@
   border:1px solid #ddd;
 }
 
-#pswd_info2 h4 {
+#pswd_in h4 {
   margin:0 0 10px 0;
   padding:0;
   font-weight:normal;
 }
-#pswd_info2::before {
+#pswd_in::before {
   content: "\25B2";
   position:absolute;
   top:-12px;
@@ -83,24 +83,8 @@
 }
 
 
-#pswd_info2 {
+#pswd_in {
   display:none;
-}
-
-
-
-
-.invalid2 {
-  background:url(../images/invalid.png) no-repeat 0 50%;
-  padding-left:22px;
-  line-height:24px;
-  color:#ec3f41;
-}
-.valid2 {
-  background:url(../images/valid.png) no-repeat 0 50%;
-  padding-left:22px;
-  line-height:24px;
-  color:#3a7d34;
 }
 
  
