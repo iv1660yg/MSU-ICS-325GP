@@ -62,7 +62,7 @@ if (isset($_POST['updatepassword'])) {
       <input type="password" id="pswd" name="password2" placeholder="confirm password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-control" />
       <button type="submit" name="updatepassword">Change Password</button>
 	  <font align="center" size="3" color="red"><strong><?php echo "<BR>" .$error_message ?></strong></font>
-	  <div id="pswd_info">
+	  <div id="pswd_info2">
 			<h4>Password must meet the following requirements:</h4>
 			<ul>
 				<li id="letter" class="invalid">At least <strong>one letter</strong></li>
