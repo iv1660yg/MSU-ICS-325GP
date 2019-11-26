@@ -25,7 +25,7 @@ if (empty($_POST["keyword"])) {
     <form class="login-form" role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
       <input type="text" name="keyword" placeholder="Enter A Name" required class="form-control" />
       <button type="submit" name="search">Search Users</button>
-	  <?php echo "<BR>" .$searcherr ?>
+      <font align="center" size="3" color="red"><strong><?php echo "<BR>" .$searcherr ?></strong></font>
 
 <table align="center" width="350">
 	  <?php
