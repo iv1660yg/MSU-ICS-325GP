@@ -47,7 +47,7 @@ if(isset($_SESSION['user_id']) =="") {
                             <tr>
                                 <td><input type="text" ng-model="addData.firstname" class="form-control" placeholder="Enter First Name" ng-required="true" /></td>
                                 <td><input type="text" ng-model="addData.lastname" class="form-control" placeholder="Enter Last Name" ng-required="true" /></td>
-                                <td><input type="password" ng-model="addData.password" class="form-control" placeholder="Enter Password" ng-required="true" /></td>
+                                <td><input type="password" ng-model="addData.password" class="form-control" placeholder="Enter Password" ng-required="true" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" /></td>
                                 <td><input type="text" ng-model="addData.title" class="form-control" placeholder="Enter Job Title" ng-required="true" /></td>
 
                                 <td>
@@ -132,7 +132,7 @@ if(isset($_SESSION['user_id']) =="") {
                 <script type="text/ng-template" id="edit">
                     <td><input type="text" ng-model="formData.firstname" class="form-control"  /></td>
                     <td><input type="text" ng-model="formData.lastname" class="form-control"  /></td>
-                    <td><input type="text" ng-model="formData.password" class="form-control" /></td>
+                    <td><input type="text" ng-model="formData.password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" /></td>
                     <td><input type="text" ng-model="formData.title" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.dept_id" class="form-control" /></td>
                     <td><input type="text" ng-model="formData.location_id" class="form-control" /></td>
