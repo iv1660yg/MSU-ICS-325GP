@@ -126,8 +126,8 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown2-content">
-      <a href="#">Assets</a>
-      <a href="#">Models</a>
+      <a href="../searchasset.php">Assets</a>
+      <a href="../searchmodel.php">Models</a>
     </div> 
   </div>
   <div class="dropdown2">
