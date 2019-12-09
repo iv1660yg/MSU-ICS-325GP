@@ -63,7 +63,7 @@ if(!empty($_POST['keyword'] && preg_match("/^[a-zA-Z0-9 ]+$/",$_POST["keyword"])
         echo "<br><tr>";
         While($row = $result->fetch_assoc()) {   
             $row_count++;                         
-            echo "<tr><td> Result ".$row_count." </td> <td><a href=details.php?id=".$row['asset_id'].">" . $row['serialnumber'] ."</a><td></tr>";
+            echo "<tr><td> Result ".$row_count." </td> <td><a href=modeldetails.php?id=".$row['model_id'].">" . $row['model_name'] ."</a><td></tr>";
         }
         echo "</tr>";
     }
