@@ -117,7 +117,6 @@ if(isset($_SESSION['user_id']) =="") {
                             </select>
                     </td>
                     <td>
-                    <td>
                                     <select ng-model="formData.model_status" class="form-control">
                                         <option value="">Select</option>
                                         <option value="Active">Active</option>
