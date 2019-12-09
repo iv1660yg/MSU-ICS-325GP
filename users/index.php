@@ -103,7 +103,13 @@ if(isset($_SESSION['user_id']) =="") {
 
                                 <td><input type="tel" ng-model="addData.primary_phone" class="form-control" placeholder="Enter Phone#" ng-required="true" /></td>
                                 <td><input type="email" ng-model="addData.email" class="form-control" placeholder="Enter Email" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.userType" class="form-control" placeholder=Enter Account Type" ng-required="true" /></td>
+                                <td>
+                                    <select ng-model="addData.userType" ng-required="true">
+                                        <option value="">Select</option>
+                                        <option value="admin">Administrator</option>
+                                        <option value="tech">Support Tech</option>
+                                        <option value="enduser">End User</option>                                
+                                </td>
 
 
 
