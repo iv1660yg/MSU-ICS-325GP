@@ -50,7 +50,6 @@ if(isset($_SESSION['user_id']) =="") {
                                         <option value="Enterprise">Enterprise</option>
                                         <option value="End User Workstation">End User Workstation</option>
                                     </select>    
-                                    <input type="text" ng-model="addData.category_type" class="form-control" placeholder="Enter Category" ng-required="true" />
                                 </td>
                                 <td>
                                     <select ng-model="addData.model_status" ng-required="true">
