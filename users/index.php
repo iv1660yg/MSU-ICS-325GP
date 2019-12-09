@@ -108,7 +108,8 @@ if(isset($_SESSION['user_id']) =="") {
                                         <option value="">Select</option>
                                         <option value="admin">Administrator</option>
                                         <option value="tech">Support Tech</option>
-                                        <option value="enduser">End User</option>                                
+                                        <option value="enduser">End User</option>  
+                                    </select>                              
                                 </td>
 
 
