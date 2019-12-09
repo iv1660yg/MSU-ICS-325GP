@@ -109,14 +109,21 @@ if(isset($_SESSION['user_id']) =="") {
                     <td><input type="text" ng-model="formData.model_number" class="form-control"  /></td>
                     <td><input type="text" ng-model="formData.model_name" class="form-control"  /></td>
                     <td>
-                            <select ng-model="formData.category_type" ng-required="true">
+                            <select ng-model="formData.category_type" class="form-control">
                                         <option value="">Select</option>
                                         <option value="End User Mobility">End User Mobility</option>
                                         <option value="Enterprise">Enterprise</option>
                                         <option value="End User Workstation">End User Workstation</option>
                             </select>
                     </td>
-                    <td><input type="text" ng-model="formData.model_status" class="form-control" /></td>
+                    <td>
+                    <td>
+                                    <select ng-model="formData.model_status" class="form-control">
+                                        <option value="">Select</option>
+                                        <option value="Active">Active</option>
+                                        <option value="Retired">Retired</option>
+                                    </select>                                  
+                    </td>
                     <td><input type="text" ng-model="formData.supplier_id" class="form-control" /></td>
                     <td>
                         <input type="hidden" ng-model="formData.data.model_id" />
