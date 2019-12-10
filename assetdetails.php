@@ -10,7 +10,7 @@ if (!empty($_GET)){
 }
 
 
-$result = mysqli_query($conn, "SELECT * FROM assets join users using (user_id) WHERE asset_id = '" . $aID. "' ");
+$result = mysqli_query($conn, "SELECT * FROM assets left OUTER join users using (user_id) WHERE asset_id = '" . $aID. "' ");
 $row = mysqli_fetch_array($result);
 $aSid = $row['asset_id'];
 $serialnumber = $row['serialnumber'];
@@ -26,7 +26,8 @@ $dept_id = $row['dept_id'];
 $location_id = $row['location_id'];	
 $primary_phone = $row['primary_phone'];
 $price = $row['unit_price'];
-$rental= $row['monthly_rental_price'];						
+$rental= $row['monthly_rental_price'];	
+$status = $row['asset_status'];						
 
 $assignto = $firstname." ".$lastname;
 
@@ -48,6 +49,10 @@ $assignto = $firstname." ".$lastname;
 						<tr>
 							<td>Asset ID:</td>
 							<td><?php echo $aID ?></td>
+						</tr>
+						<tr>
+							<td>Asset Status:</td>
+							<td><?php echo $status ?></td>
 						</tr>
 						<tr>
 							<td>Serial Number:</td>

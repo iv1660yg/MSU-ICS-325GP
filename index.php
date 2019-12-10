@@ -21,6 +21,8 @@ header("Location: login.php");
 				<div class="main-page">
 				<div class="form">
 				<p align="center" class="navbar-text"><strong>Welcome!</strong> You're signed in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
+
+		
 				</div>
 				</div>
 				<?php } ?>
