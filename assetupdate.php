@@ -101,6 +101,8 @@ $assignto = $firstname." ".$lastname;
 						</tr>
 					</table>
 					</fieldset>
+					<button type="submit" name="search">Search Assets</button>
+				<form>
 				</div>
 
 
