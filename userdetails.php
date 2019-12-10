@@ -64,7 +64,7 @@ $primary_phone = $row['primary_phone'];
 						</tr>
 						<tr>
 							<td>Manager</td>
-							<td><?php echo $managed_byID ?></td>
+							<td><?php echo "<a href=userdetails.php?id=".$managed_byID. ">".$managed_byID."</a>"  ?></td>
 						</tr>
 
 					</table>
