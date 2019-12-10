@@ -71,14 +71,11 @@ if(isset($_SESSION['user_id']) =="") {
                                             </select>
                                 </td>                                
                                 <td>
-                                <td>
                                     <select ng-model="addData.asset_status" ng-required="true">
                                         <option value="">Select</option>
-                                        <option value="In Use">In Use</option>
                                         <option value="In Stock">In Stock</option>
-                                        <option value="Retired">In Stock</option>
-                                    </select>                                  
-    
+                                        <option value="In Use">In Use</option>
+                                    </select>  
                                 </td>
                                 <td>
                                         <select ng-model="addData.user_id" ng-required="true">
