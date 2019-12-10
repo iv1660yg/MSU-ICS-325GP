@@ -160,7 +160,7 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown2-content">
-      <a href="#">My Assets</a>
+      <a href="../myasset.php">My Assets</a>
     </div> 
   </div>
   <div class="dropdown2">

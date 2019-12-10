@@ -3,11 +3,10 @@ session_start();
 include('header.php');
 include_once("db_connect.php");
 
-if (!empty($_GET)){
 
-	$aID = (int) $_GET['id'];
+$aID = "8006";
 
-}
+
 
 
 $result = mysqli_query($conn, "SELECT * FROM assets join users using (user_id) WHERE asset_id = '" . $aID. "' ");
