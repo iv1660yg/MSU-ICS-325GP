@@ -80,6 +80,15 @@ $assignto = $firstname." ".$lastname;
 						</tr>
 					</table>
 					</fieldset>
+					<?php 
+						if ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="tech" ) )) {
+
+							echo "<a href=userupdate.php?id=".$aID.">Edit Asset Assignment</a>";
+
+						}
+						?>
+
+
 				</div>
 
 
