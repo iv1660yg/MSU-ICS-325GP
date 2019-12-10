@@ -5,7 +5,7 @@ include_once("db_connect.php");
 
 
 $result2 = mysqli_query($conn, "SELECT * FROM assets WHERE user_id = '" . $_SESSION['user_id']. "' ");
-$row2 = mysqli_fetch_array($result);
+$row2 = mysqli_fetch_array($result2);
 $aID = $row2['asset_id'];
 
 
