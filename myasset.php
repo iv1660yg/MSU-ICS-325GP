@@ -4,9 +4,9 @@ include('header.php');
 include_once("db_connect.php");
 
 
-
-$aID = "8006";
-
+$result2 = mysqli_query($conn, "SELECT * FROM assets WHERE user_id = '" . $_SESSION['user_id']. "' ");
+$row2 = mysqli_fetch_array($result);
+$aID = $row2['asset_id'];
 
 
 

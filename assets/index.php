@@ -75,6 +75,7 @@ if(isset($_SESSION['user_id']) =="") {
                                         <option value="">Select</option>
                                         <option value="In Stock">In Stock</option>
                                         <option value="In Use">In Use</option>
+                                        <option value="Retired">Retired</option>
                                     </select>  
                                 </td>
                                 <td>
