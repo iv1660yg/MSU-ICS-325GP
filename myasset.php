@@ -55,7 +55,7 @@ $assignto = $firstname." ".$lastname;
 						</tr>
 						<tr>
 							<td>Unit Price:</td>
-							<td><?php echo $price ?></td>
+							<td><?php echo "$".$price ?></td>
 						</tr>
 						<tr>
 							<td>Rental Price:</td>
