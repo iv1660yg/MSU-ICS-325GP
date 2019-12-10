@@ -70,7 +70,16 @@ if(isset($_SESSION['user_id']) =="") {
                                             ?>
                                             </select>
                                 </td>                                
-                                <td><input type="text" ng-model="addData.asset_status" class="form-control" placeholder="Enter Asset Status" ng-required="true" /></td>
+                                <td>
+                                <td>
+                                    <select ng-model="addData.asset_status" ng-required="true">
+                                        <option value="">Select</option>
+                                        <option value="In Use">In Use</option>
+                                        <option value="In Stock">In Stock</option>
+                                        <option value="Retired">In Stock</option>
+                                    </select>                                  
+    
+                                </td>
                                 <td>
                                         <select ng-model="addData.user_id" ng-required="true">
                                             <option value="">Select</option>
