@@ -3,6 +3,19 @@ session_start();
 include('header.php');
 include_once("db_connect.php");
 
+
+if (!empty($_POST["newUser_ID"])) {
+
+	$newUser_ID = $_POST["newUser_ID"];
+
+	mysqli_query($conn, "Update assets SET user_id = '".$newUser_ID."' WHERE asset_id = '" . $aID. "' ");
+
+
+}
+
+
+
+
 if (!empty($_GET)){
 
 	$aID = (int) $_GET['id'];
@@ -69,7 +82,7 @@ $assignto = $firstname." ".$lastname;
 						<tr>
 							<td>Asset Assgined To:</td>
 							<td>
-							<select userID="user_id" ng-required="true">
+							<select name="newUser_ID" ng-required="true">
                                             <option value="">Select</option>
                                             <?php 
 
@@ -101,7 +114,7 @@ $assignto = $firstname." ".$lastname;
 						</tr>
 					</table>
 					</fieldset>
-					<button type="submit" name="search">Search Assets</button>
+					<button type="submit" name="search">Update</button>
 				<form>
 				</div>
 
